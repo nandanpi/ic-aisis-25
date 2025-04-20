@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-serif bg-[#fdfdfd] text-black antialiased">
+      <body className="font-serif bg-[#f0eeec] text-black antialiased">
         <Navbar />
         <main className="min-h-screen px-6 md:px-20 py-10">
           {children}
