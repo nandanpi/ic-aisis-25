@@ -6,14 +6,28 @@ import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null); // Track which dropdown is open on mobile
+  const [hovered, setHovered] = useState<string | null>(null); // Track which menu item is being hovered
   const pathname = usePathname();
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    {
+      label: 'About',
+      dropdown: [
+        { href: '/about', label: 'About' },
+        { href: '/objectives', label: 'Objectives' },
+      ],
+    },
     { href: '/topics', label: 'Topics' },
     { href: '/schedule', label: 'Schedule' },
-    { href: '/call-for-papers', label: 'Call for Papers' },
+    {
+      label: 'Call for Papers',
+      dropdown: [
+        { href: '/submission-guidelines', label: 'Submission Guidelines' },
+        { href: '/expected-outcomes', label: 'Expected Outcomes' },
+      ],
+    },
     { href: '/organizers', label: 'Organizers' },
     { href: '/register', label: 'Register' },
     { href: '/contact', label: 'Contact' },
@@ -28,20 +42,57 @@ const Navbar = () => {
           </h1>
         </Link>
 
-        <div className="hidden md:flex space-x-6 font-serif text-lg text-black">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`hover:underline underline-offset-4 decoration-[1px] transition-all duration-200 ${
-                pathname === link.href ? 'font-bold' : ''
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6 font-serif text-lg text-black relative">
+          {navLinks.map((link, index) =>
+            link.dropdown ? (
+              <div
+                key={index}
+                className="relative group"
+                onMouseEnter={() => setHovered(link.label)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <button
+                  className={`hover:underline underline-offset-4 decoration-[1px] transition-all duration-200 ${
+                    link.dropdown.some((d) => pathname === d.href) ? 'font-bold' : ''
+                  }`}
+                >
+                  {link.label}
+                </button>
+                {/* Dropdown */}
+                <div
+                  className={`absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-52 py-2 z-40 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ${
+                    hovered === link.label ? 'opacity-100 pointer-events-auto' : ''
+                  }`}
+                >
+                  {link.dropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`block px-4 py-2 hover:bg-gray-100 text-black ${
+                        pathname === item.href ? 'font-bold' : ''
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`hover:underline underline-offset-4 decoration-[1px] transition-all duration-200 ${
+                  pathname === link.href ? 'font-bold' : ''
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
 
+        {/* Mobile Hamburger */}
         <button
           className="md:hidden text-black"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -72,20 +123,51 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 py-4 border-t border-gray-300 bg-[#fdfdfd] space-y-2 font-serif">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block text-black py-2 hover:underline ${
-                pathname === link.href ? 'font-bold' : ''
-              }`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="md:hidden px-6 py-4 border-t border-gray-300 bg-[#fdfdfd] space-y-4 font-serif text-black">
+          {navLinks.map((link, index) =>
+            link.dropdown ? (
+              <div key={index} className="space-y-2">
+                <button
+                  className="font-semibold w-full text-left"
+                  onClick={() => {
+                    setDropdownOpen(dropdownOpen === link.label ? null : link.label);
+                  }}
+                >
+                  {link.label}
+                </button>
+                {/* Dropdown items for mobile */}
+                {dropdownOpen === link.label && (
+                  <div className="ml-4 space-y-1">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`block py-1 ${
+                          pathname === item.href ? 'font-bold' : ''
+                        }`}
+                        onClick={() => setMenuOpen(false)} // Close the menu on item click
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block py-2 ${
+                  pathname === link.href ? 'font-bold' : ''
+                }`}
+                onClick={() => setMenuOpen(false)} // Close the menu on item click
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
       )}
     </nav>

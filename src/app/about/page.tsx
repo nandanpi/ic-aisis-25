@@ -1,8 +1,30 @@
+'use client';
 import React from 'react';
 import { FaGlobe, FaLightbulb, FaMicroscope } from 'react-icons/fa';
 import 'animate.css';
 
 export default function About() {
+  const highlights = [
+    {
+      icon: <FaGlobe className="text-white text-4xl mb-4 z-10 relative" />,
+      title: 'Global Engagement',
+      desc: 'Researchers and experts from across the world participate.',
+      bgImage: '/global.jpg', // Replace with your actual image path
+    },
+    {
+      icon: <FaLightbulb className="text-white text-4xl mb-4 z-10 relative" />,
+      title: 'Innovative Ideas',
+      desc: 'Revolutionizing sustainability through cutting-edge AI research.',
+      bgImage: 'innovation.jpg', // Replace with your actual image path
+    },
+    {
+      icon: <FaMicroscope className="text-white text-4xl mb-4 z-10 relative" />,
+      title: 'Academic Recognition',
+      desc: 'Top research papers published in Scopus-indexed journals.',
+      bgImage: 'research.jpg', // Replace with your actual image path
+    },
+  ];
+
   return (
     <section className="bg-white text-gray-800 py-28 px-6 sm:px-12 lg:px-40 max-w-screen-xl mx-auto relative overflow-hidden font-sans">
       {/* Background grid pattern */}
@@ -21,20 +43,31 @@ export default function About() {
 
       {/* Highlights Section */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-24 relative z-10">
-        {[{
-          icon: <FaGlobe className="text-4xl text-gray-700 mb-4" />, title: 'Global Engagement',
-          desc: 'Researchers and experts from across the world participate.'
-        }, {
-          icon: <FaLightbulb className="text-4xl text-gray-700 mb-4" />, title: 'Innovative Ideas',
-          desc: 'Revolutionizing sustainability through cutting-edge AI research.'
-        }, {
-          icon: <FaMicroscope className="text-4xl text-gray-700 mb-4" />, title: 'Academic Recognition',
-          desc: 'Top research papers published in Scopus-indexed journals.'
-        }].map((item, idx) => (
-          <div key={idx} className="bg-white border border-gray-200 p-8 rounded-2xl shadow-md text-center transform transition hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
-            {item.icon}
-            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.desc}</p>
+        {highlights.map((item, idx) => (
+          <div
+            key={idx}
+            className="relative group rounded-2xl overflow-hidden text-center text-black shadow-xl transform transition hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            {/* Background Image with rgba overlay */}
+            <div
+              className="absolute inset-0 bg-cover bg-center w-full h-full"
+              style={{
+                backgroundImage: `url(${item.bgImage})`,
+                opacity: 0.6, // Set opacity here to make the image less visible
+                backgroundSize: 'cover', // Ensure it covers the container
+                backgroundPosition: 'center',
+              }}
+            />
+
+            {/* Overlay with reduced opacity for better text visibility */}
+            <div className="absolute inset-0 bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
+
+            {/* Content */}
+            <div className="relative p-8 z-10">
+              {item.icon}
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm">{item.desc}</p>
+            </div>
           </div>
         ))}
       </div>
