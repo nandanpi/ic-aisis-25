@@ -75,13 +75,13 @@ export default function About() {
       {/* Description */}
       <div className="space-y-12 text-lg sm:text-xl leading-relaxed font-serif text-justify animate__animated animate__fadeIn animate__delay-3s relative z-10">
         <p>
-          The <strong>International Conference on Artificial Intelligence for Sustainability and Intelligent Systems (IC-AISIS’25)</strong> is set to take place on May 5th and 6th, 2025, at NMAM Institute of Technology, Nitte. This hybrid event is a convergence of visionaries, researchers, and enthusiasts eager to explore AI's role in a sustainable future.
+          The <strong>International Conference on Artificial Intelligence for Sustainability and Intelligent Systems (IC-AISIS&apos;25)</strong> is set to take place on May 5th and 6th, 2025, at NMAM Institute of Technology, Nitte. This hybrid event is a convergence of visionaries, researchers, and enthusiasts eager to explore AI's role in a sustainable future.
         </p>
         <p>
-          Organized by the Association of Digital Engineering (ADE), the Centre for Intelligent Devices & Systems (CIDS), and the Department of MCA, IC-AISIS’25 fosters innovation and academic collaboration. The conference welcomes professionals, students, and scholars to present their work and build lasting connections.
+          Organized by the Association of Digital Engineering (ADE), the Centre for Intelligent Devices & Systems (CIDS), and the Department of MCA, IC-AISIS&apos;25 fosters innovation and academic collaboration. The conference welcomes professionals, students, and scholars to present their work and build lasting connections.
         </p>
         <p>
-          Events include keynote addresses, technical sessions, student research showcases, and expert-led workshops. With a strong emphasis on practical applications and interdisciplinary research, IC-AISIS’25 aims to be a transformative academic experience.
+          Events include keynote addresses, technical sessions, student research showcases, and expert-led workshops. With a strong emphasis on practical applications and interdisciplinary research, IC-AISIS&apos;25 aims to be a transformative academic experience.
         </p>
       </div>
 
