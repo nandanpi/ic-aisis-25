@@ -6,22 +6,22 @@ import 'animate.css';
 export default function About() {
   const highlights = [
     {
-      icon: <FaGlobe className="text-white text-4xl mb-4 z-10 relative" />,
+      icon: <FaGlobe className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Global Engagement',
       desc: 'Researchers and experts from across the world participate.',
-      bgImage: '/global.jpg', // Replace with your actual image path
+      bgImage: '/global.jpg',
     },
     {
-      icon: <FaLightbulb className="text-white text-4xl mb-4 z-10 relative" />,
+      icon: <FaLightbulb className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Innovative Ideas',
       desc: 'Revolutionizing sustainability through cutting-edge AI research.',
-      bgImage: 'innovation.jpg', // Replace with your actual image path
+      bgImage: '/innovation.jpg',
     },
     {
-      icon: <FaMicroscope className="text-white text-4xl mb-4 z-10 relative" />,
+      icon: <FaMicroscope className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Academic Recognition',
       desc: 'Top research papers published in Scopus-indexed journals.',
-      bgImage: 'research.jpg', // Replace with your actual image path
+      bgImage: '/research.jpg',
     },
   ];
 
@@ -46,24 +46,21 @@ export default function About() {
         {highlights.map((item, idx) => (
           <div
             key={idx}
-            className="relative group rounded-2xl overflow-hidden text-center text-black shadow-xl transform transition hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s"
+            className="relative group rounded-2xl overflow-hidden text-center shadow-xl transform transition hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s"
           >
-            {/* Background Image with rgba overlay */}
+            {/* Background Image */}
             <div
-              className="absolute inset-0 bg-cover bg-center w-full h-full"
+              className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60"
               style={{
                 backgroundImage: `url(${item.bgImage})`,
-                opacity: 0.6, // Set opacity here to make the image less visible
-                backgroundSize: 'cover', // Ensure it covers the container
-                backgroundPosition: 'center',
               }}
-            />
+            ></div>
 
-            {/* Overlay with reduced opacity for better text visibility */}
-            <div className="absolute inset-0 bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300"></div>
 
             {/* Content */}
-            <div className="relative p-8 z-10">
+            <div className="relative p-8 z-10 text-white">
               {item.icon}
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-sm">{item.desc}</p>
