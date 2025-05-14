@@ -86,7 +86,7 @@ export default function About() {
       {/* Quote Callout */}
       <div className="mt-20 bg-gray-100 p-10 rounded-xl text-center shadow-inner animate__animated animate__fadeInUp animate__delay-4s relative z-10">
         <blockquote className="text-xl italic text-gray-700 max-w-3xl mx-auto">
-          “AI for sustainability is not just a theme – it's a commitment to future generations.”
+          “AI for sustainability is not just a theme  it's a commitment to future generations.”
         </blockquote>
       </div>
 
