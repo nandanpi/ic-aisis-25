@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export const metadata: Metadata = {
-  title: 'IC-AISIS 2026',
+  title: 'IC-AISIS 2025',
   description: 'International Conference on AI and Smart Information Systems',
 };
 
