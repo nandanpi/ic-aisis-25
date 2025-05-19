@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import FallingLeaves from './components/FallingLeaves';
 import CountdownTimer from './components/CountdownTimer';
 import LeafPopEffect from './components/LeafPopEffect';
 
@@ -20,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden min-h-screen flex flex-col bg-[#fdfdfd] relative">
-      <FallingLeaves />
+    
       {showPop && <LeafPopEffect position={popPosition} />}
 
       <main className="flex-1 flex items-center justify-center px-4 sm:px-8 py-12 sm:py-20">
@@ -32,7 +31,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="nmamit.jpg"
+              src=""
               alt="NMAMIT Campus"
               className="w-full h-64 object-cover rounded-xl shadow-md"
             />
