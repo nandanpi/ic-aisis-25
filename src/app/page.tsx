@@ -31,7 +31,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src=""
+             
               alt="NMAMIT Campus"
               className="w-full h-64 object-cover rounded-xl shadow-md"
             />

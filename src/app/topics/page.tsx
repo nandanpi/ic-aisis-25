@@ -2,19 +2,15 @@ import React from 'react';
 
 export default function Topics() {
   return (
-    <div className="bg-gradient-to-b from-green-100 to-blue-50 text-gray-800 min-h-screen p-6">
+    <div className="bg-gradient-to-b from-white-100 to-blue-50 text-gray-800 min-h-screen p-6">
       <h2 className="text-4xl font-serif font-semibold text-center mb-8 text-gray-900 drop-shadow-md animate-fade-in">
         Key Themes
       </h2>
 
-      {/* Section for each major theme */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {/* AI for Environmental and Sustainable Development */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/environmental-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-green-700">AI for Environmental and Sustainable Development</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-green-500 transition-colors">AI-driven climate change mitigation and adaptation</li>
@@ -27,10 +23,7 @@ export default function Topics() {
 
         {/* AI in Healthcare and Well-being */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/healthcare-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-blue-700">AI in Healthcare and Well-being</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-blue-500 transition-colors">AI-powered predictive analytics in disease prevention</li>
@@ -43,10 +36,7 @@ export default function Topics() {
 
         {/* AI for Ethical and Responsible Innovation */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/ethical-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-purple-700">AI for Ethical and Responsible Innovation</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-purple-500 transition-colors">AI governance, ethics, and policy frameworks for sustainability</li>
@@ -58,10 +48,7 @@ export default function Topics() {
 
         {/* AI for Smart Cities and Infrastructure */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/smart-cities-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-teal-700">AI for Smart Cities and Infrastructure</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-teal-500 transition-colors">AI-driven urban planning and sustainable city management</li>
@@ -74,10 +61,7 @@ export default function Topics() {
 
         {/* AI in Advanced Manufacturing and Industrial Sustainability */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/manufacturing-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-gray-700">AI in Advanced Manufacturing and Industrial Sustainability</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-gray-500 transition-colors">AI for smart factories, energy-efficient production, and predictive maintenance</li>
@@ -89,10 +73,7 @@ export default function Topics() {
 
         {/* AI & Emerging Technologies for a Sustainable Future */}
         <div className="relative group border border-gray-200 p-6 rounded-xl shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-10 transition-opacity duration-300"
-               style={{ backgroundImage: 'url(/emerging-tech-ai.jpg)' }}>
-          </div>
-          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4 text-indigo-700">AI & Emerging Technologies for a Sustainable Future</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li className="hover:text-indigo-500 transition-colors">AI in quantum computing for sustainability solutions</li>
@@ -102,8 +83,6 @@ export default function Topics() {
             </ul>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

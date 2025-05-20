@@ -10,11 +10,6 @@ export default function ConferenceSchedule() {
 
       {/* Day 1 Schedule */}
       <div className="relative bg-white shadow-2xl rounded-3xl border-4 border-black/10 p-10 hover:shadow-3xl transition duration-500">
-        <img
-          src="day1.jpg"
-          alt="Day 1"
-          className="absolute inset-0 w-full h-full object-cover opacity-15 rounded-3xl pointer-events-none"
-        />
         <div className="relative z-10 space-y-6">
           <h3 className="text-4xl font-bold text-center text-black flex justify-center items-center gap-3">
             <Calendar className="text-indigo-600 w-7 h-7" /> Day 1 Schedule
@@ -44,11 +39,7 @@ export default function ConferenceSchedule() {
 
       {/* Day 2 Schedule */}
       <div className="relative bg-white shadow-2xl rounded-3xl border-4 border-black/10 p-10 hover:shadow-3xl transition duration-500">
-        <img
-          src="day2.jpg"
-          alt="Day 2"
-          className="absolute inset-0 w-full h-full object-cover opacity-15 rounded-3xl pointer-events-none"
-        />
+  
         <div className="relative z-10 space-y-6">
           <h3 className="text-4xl font-bold text-center text-black flex justify-center items-center gap-3">
             <Calendar className="text-indigo-600 w-7 h-7" /> Day 2 Schedule

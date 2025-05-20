@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const SubmissionGuidelines = () => {
   return (
@@ -15,17 +14,10 @@ const SubmissionGuidelines = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 max-w-4xl mx-auto mt-16 bg-[#fdfaf4] shadow-2xl border border-[#d4cfc4] rounded-2xl p-10 md:p-12 space-y-6 transform hover:scale-[1.01] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.2)] transition duration-500"
+        className="relative z-10 max-w-4xl mx-auto mt-16 bg-[#ffffff] shadow-2xl border border-[#d4cfc4] rounded-2xl p-10 md:p-12 space-y-6 transform hover:scale-[1.01] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.2)] transition duration-500"
       >
         <div className="absolute inset-0 z-0">
-        <Image
-          src="/sub1.jpg"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="opacity-20"
-        />
+        
       </div>
         <motion.h1
           initial={{ scale: 0.95, opacity: 0 }}

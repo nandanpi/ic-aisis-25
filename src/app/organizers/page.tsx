@@ -6,11 +6,7 @@ const Organizers: React.FC = () => {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/commette.jpg"
-          alt="background"
-          className="w-full h-full object-cover rounded-xl"
-        />
+        
         {/* Overlay for dimming background */}
         <div className="absolute inset-0 bg-white/40  rounded-xl"></div>
       </div>

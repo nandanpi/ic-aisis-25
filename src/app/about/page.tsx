@@ -9,19 +9,19 @@ export default function About() {
       icon: <FaGlobe className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Global Engagement',
       desc: 'Researchers and experts from across the world participate.',
-      bgImage: '/global.jpg',
+      
     },
     {
       icon: <FaLightbulb className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Innovative Ideas',
       desc: 'Revolutionizing sustainability through cutting-edge AI research.',
-      bgImage: '/innovation.jpg',
+      
     },
     {
       icon: <FaMicroscope className="text-white text-4xl mb-4 relative z-10" />,
       title: 'Academic Recognition',
       desc: 'Top research papers published in Scopus-indexed journals.',
-      bgImage: '/research.jpg',
+      
     },
   ];
 
@@ -51,9 +51,7 @@ export default function About() {
             {/* Background Image */}
             <div
               className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60"
-              style={{
-                backgroundImage: `url(${item.bgImage})`,
-              }}
+             
             ></div>
 
             {/* Overlay */}

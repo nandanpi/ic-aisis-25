@@ -6,22 +6,17 @@ const ObjectivesPage = () => {
   return (
     <section className="min-h-screen bg-[#ffffff] flex items-center justify-center py-16 px-4 md:px-8 font-serif">
       {/* Card container */}
-      <div className="relative bg-[#fdfaf2] shadow-2xl rounded-3xl max-w-4xl w-full p-8 md:p-12 border border-[#e0d6c3] overflow-hidden">
+      <div className="relative bg-[#ffffff] shadow-2xl rounded-3xl max-w-4xl w-full p-8 md:p-12 border border-[#e0d6c3] overflow-hidden">
         
         {/* Background image inside card */}
-        <img
-          src="/objective.png"
-          alt="Decorative background"
-          className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none rounded-3xl"
-        />
-
+       
         {/* Content above background */}
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 border-b-2 border-[#c9b28e] pb-2 tracking-wide text-[#3b2f1c]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 border-b-2 border-[#000000] pb-2 tracking-wide text-[#3b2f1c]">
             Objectives
           </h2>
 
-          <ul className="space-y-5 text-lg md:text-xl leading-relaxed text-[#4c3f2c]">
+          <ul className="space-y-5 text-lg md:text-xl leading-relaxed text-[#000000]">
             {[
               "To explore the role of AI in promoting sustainability across various sectors.",
               "To bring together experts from academia, industry, and policy-making for knowledge exchange.",
