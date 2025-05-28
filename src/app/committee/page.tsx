@@ -15,30 +15,30 @@ export default function Committees() {
     name: "Sri N. Vinaya Hegde",
     title:
       "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/committee/vinayaHegde.jpg",
   };
 
   const steeringCommittee = [
     {
       name: "Sri Vishal Hegde",
       title: "Pro-Chancellor, Nitte (Deemed to be University)",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/vishalHegde.jpg",
     },
     {
       name: "Prof. (Dr.) M. S. Moodithaya",
       title: "Vice-Chancellor, Nitte (Deemed to be University)",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/moodithaya.jpg",
     },
     {
       name: "Prof. (Dr.) Gopal Mugeraya",
       title:
         "Vice-President (Technical Education), Nitte (Deemed to be University)",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/gopalMugeraya.jpg",
     },
     {
       name: "Dr. Harsha Halahalli",
       title: "Registrar, Nitte (Deemed to be University)",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/harsha.jpg",
     },
   ];
 
@@ -46,17 +46,17 @@ export default function Committees() {
     {
       name: "Dr. Niranjan N Chiplunkar",
       title: "Principal, NMAM Institute of Technology, Nitte",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/niranjan.jpg",
     },
     {
       name: "Dr. Praveenkumar Shetty",
       title: "Director (R&D), Nitte (Deemed to be University)",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/praveen.jpg",
     },
     {
       name: "Dr. Vijeesh V",
       title: "Associate Director (R&D), Nitte Off-Campus Centre",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/vijeesh.jpg",
     },
   ];
 
@@ -64,12 +64,12 @@ export default function Committees() {
     {
       name: "Dr. Shashank Shetty",
       title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/shashankShetty.jpg",
     },
     {
       name: "Dr. Mangala Shetty",
       title: "Associate Professor, Department of MCA, NMAMIT, Nitte",
-      image: "/placeholder.svg?height=150&width=150",
+      image: "/committee/mangalaShetty.jpg",
     },
   ];
 
@@ -184,9 +184,9 @@ export default function Committees() {
 
   const studentOrganizers = [
     {
-      name: "Mr. Nandan Pai",
+      name: "Mr. Nandan R Pai",
       title: "Department of AIML",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/committee/students/nandan.jpeg",
     },
     {
       name: "Mr. Aarthik K",
@@ -201,7 +201,7 @@ export default function Committees() {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-16">
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>
@@ -271,11 +271,11 @@ export default function Committees() {
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
             <div className="flex flex-col items-center text-center">
               <Image
-                width={50}
+                width={100}
                 height={100}
                 src={patron.image || "/placeholder.svg"}
                 alt={patron.name}
-                className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
+                className="w-48 h-48 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
               />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {patron.name}
@@ -309,11 +309,11 @@ export default function Committees() {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
               >
                 <Image
-                  width={50}
+                  width={100}
                   height={100}
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
                 />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {member.name}
@@ -348,11 +348,11 @@ export default function Committees() {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
               >
                 <Image
-                  width={50}
+                  width={100}
                   height={100}
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
                 />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {member.name}
@@ -385,11 +385,11 @@ export default function Committees() {
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
               >
                 <Image
-                  width={50}
+                  width={100}
                   height={100}
                   src={chair.image || "/placeholder.svg"}
                   alt={chair.name}
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100"
+                  className="w-36 h-36 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100"
                 />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {chair.name}
@@ -456,11 +456,11 @@ export default function Committees() {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
               >
                 <Image
-                  width={50}
+                  width={100}
                   height={100}
                   src={student.image || "/placeholder.svg"}
                   alt={student.name}
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
                 />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {student.name}

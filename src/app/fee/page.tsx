@@ -114,7 +114,7 @@ export default function RegistrationFees() {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-16">
       <section className="relative py-16 overflow-hidden px-5">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>

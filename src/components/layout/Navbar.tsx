@@ -24,7 +24,12 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     {
       label: "About",
-      href: "/about",
+      dropdown: [
+        { href: "/about?tab=scope", label: "Conference Scope" },
+        { href: "/about?tab=objectives", label: "Objectives" },
+        { href: "/about?tab=theme", label: "Theme Importance" },
+        { href: "/about?tab=institutions", label: "Organizing Institutions" },
+      ],
     },
     { href: "/topics", label: "Topics" },
     { href: "/schedule", label: "Schedule" },
@@ -39,6 +44,8 @@ const Navbar = () => {
     { href: "/fee", label: "Registration Fee" },
     { href: "/contact", label: "Contact" },
   ];
+
+  const isAboutPage = pathname === "/about";
 
   return (
     <nav
@@ -56,12 +63,7 @@ const Navbar = () => {
             className="md:w-56 w-40 h-6 md:h-8"
           />
           <div className="flex items-center border-l-2 md:ml-2 md:pl-4 ml-1 pl-2">
-            <div>
-              <h1 className="md:text-xl text-lg font-bold text-gray-800">
-                IC-AISIS
-              </h1>
-              <p className="md:text-xs text-[0.5rem] text-gray-600">2025</p>
-            </div>
+            <Image src="/logo.png" alt="Logo" width={100} height={100} />
           </div>
         </Link>
 
@@ -76,7 +78,11 @@ const Navbar = () => {
               >
                 <button
                   className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${
-                    link.dropdown.some((d) => pathname === d.href)
+                    (link.label === "About" && isAboutPage) ||
+                    (link.label === "Call for Papers" &&
+                      link.dropdown.some(
+                        (d) => pathname === d.href.split("?")[0],
+                      ))
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
@@ -97,7 +103,7 @@ const Navbar = () => {
                       key={item.href}
                       href={item.href}
                       className={`block px-4 py-3 text-sm transition-colors ${
-                        pathname === item.href
+                        pathname === item.href.split("?")[0]
                           ? "text-blue-600 bg-blue-50"
                           : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                       }`}
@@ -159,7 +165,7 @@ const Navbar = () => {
                           key={item.href}
                           href={item.href}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors ${
-                            pathname === item.href
+                            pathname === item.href.split("?")[0]
                               ? "text-blue-600 bg-blue-50"
                               : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                           }`}

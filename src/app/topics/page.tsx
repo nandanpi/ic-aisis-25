@@ -114,7 +114,7 @@ export default function Topics() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative py-24 overflow-hidden px-5">
+      <section className="relative pt-32 pb-24 overflow-hidden px-5">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>
           <div className="absolute inset-0 opacity-20">

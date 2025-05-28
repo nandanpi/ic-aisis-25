@@ -14,7 +14,7 @@ export default function Contact() {
       institution: "NMAM Institute of Technology, Nitte",
       email: "shashank.shetty@nitte.edu.in",
       phone: "+91 98765 43211",
-      image: "/shashankShetty.jpg",
+      image: "/committee/shashankShetty.jpg",
     },
     {
       name: "Dr. Mangala Shetty",
@@ -23,12 +23,12 @@ export default function Contact() {
       institution: "NMAM Institute of Technology, Nitte",
       email: "mangala.shetty@nitte.edu.in",
       phone: "+91 98808 91217",
-      image: "/mangalaShetty.jpg",
+      image: "/committee/mangalaShetty.jpg",
     },
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-16">
       <section className="relative py-16 overflow-hidden px-5">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>
