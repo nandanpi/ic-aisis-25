@@ -112,7 +112,10 @@ const Timeline = () => {
   };
 
   return (
-    <section className="section-padding bg-gray-50 mb-32 py-16 px-5">
+    <section
+      className="section-padding bg-gray-50 mb-24 py-16 px-5"
+      id="important-dates"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
