@@ -35,7 +35,7 @@ const Navbar = () => {
         { href: "/expected-outcomes", label: "Expected Outcomes" },
       ],
     },
-    { href: "/organizers", label: "Organizers" },
+    { href: "/committee", label: "Committees" },
     { href: "/fee", label: "Registration Fee" },
     { href: "/contact", label: "Contact" },
   ];
