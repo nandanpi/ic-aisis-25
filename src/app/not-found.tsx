@@ -52,13 +52,6 @@ export default function NotFound() {
     },
   ];
 
-  const popularPages = [
-    { href: "/submission-guidelines", label: "Submission Guidelines" },
-    { href: "/fee", label: "Registration Fees" },
-    { href: "/expected-outcomes", label: "Expected Outcomes" },
-    { href: "/organizers", label: "Organizers" },
-  ];
-
   return (
     <div className="min-h-screen pt-16">
       <section className="relative py-16 overflow-hidden">
