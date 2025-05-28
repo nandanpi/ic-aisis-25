@@ -146,7 +146,7 @@ export default function Home() {
 
       <Timeline />
 
-      <div className="max-w-6xl mx-auto mb-32">
+      <div className="max-w-6xl mx-auto mb-32 px-5">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
             Why Attend IC-AISIS 2025?

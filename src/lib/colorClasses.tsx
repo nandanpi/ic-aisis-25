@@ -70,3 +70,55 @@ export const colorClasses = {
     gradient: "from-indigo-50 to-indigo-100/50",
   },
 };
+
+export const colorClasses2 = {
+  blue: {
+    bg: "bg-blue-50",
+    border: "border-blue-200",
+    icon: "bg-blue-100 text-blue-600",
+    badge: "bg-blue-600 text-white",
+    gradient: "from-blue-50 to-blue-100",
+  },
+  green: {
+    bg: "bg-green-50",
+    border: "border-green-200",
+    icon: "bg-green-100 text-green-600",
+    badge: "bg-green-600 text-white",
+    gradient: "from-green-50 to-green-100",
+  },
+  purple: {
+    bg: "bg-purple-50",
+    border: "border-purple-200",
+    icon: "bg-purple-100 text-purple-600",
+    badge: "bg-purple-600 text-white",
+    gradient: "from-purple-50 to-purple-100",
+  },
+  orange: {
+    bg: "bg-orange-50",
+    border: "border-orange-200",
+    icon: "bg-orange-100 text-orange-600",
+    badge: "bg-orange-600 text-white",
+    gradient: "from-orange-50 to-orange-100",
+  },
+  red: {
+    bg: "bg-red-50",
+    border: "border-red-200",
+    icon: "bg-red-100 text-red-600",
+    badge: "bg-red-600 text-white",
+    gradient: "from-red-50 to-red-100",
+  },
+  gray: {
+    bg: "bg-gray-50",
+    border: "border-gray-200",
+    icon: "bg-gray-100 text-gray-600",
+    badge: "bg-gray-600 text-white",
+    gradient: "from-gray-50 to-gray-100",
+  },
+  indigo: {
+    bg: "bg-indigo-50",
+    border: "border-indigo-200",
+    icon: "bg-indigo-100 text-indigo-600",
+    badge: "bg-indigo-600 text-white",
+    gradient: "from-indigo-50 to-indigo-100",
+  },
+};

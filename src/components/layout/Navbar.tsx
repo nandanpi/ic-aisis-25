@@ -36,7 +36,7 @@ const Navbar = () => {
       ],
     },
     { href: "/organizers", label: "Organizers" },
-    { href: "/register", label: "Register" },
+    { href: "/fee", label: "Registration Fee" },
     { href: "/contact", label: "Contact" },
   ];
 

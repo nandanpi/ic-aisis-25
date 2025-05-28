@@ -263,15 +263,12 @@ export default function Topics() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/submission-guidelines"
-                  className="btn-primary inline-flex items-center"
+                  className="inline-flex items-center"
                 >
                   View Submission Guidelines
                   <ChevronRight className="w-4 h-4 ml-2" />
                 </a>
-                <a
-                  href="/contact"
-                  className="btn-secondary inline-flex items-center"
-                >
+                <a href="/contact" className="inline-flex items-center">
                   Contact for Clarifications
                 </a>
               </div>
