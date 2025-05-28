@@ -37,7 +37,6 @@ const Navbar = () => {
       label: "Call for Papers",
       dropdown: [
         { href: "/submission-guidelines", label: "Submission Guidelines" },
-        { href: "/expected-outcomes", label: "Expected Outcomes" },
       ],
     },
     { href: "/committee", label: "Committees" },
