@@ -12,8 +12,17 @@ import {
   Lightbulb,
 } from "lucide-react";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function About() {
+  return (
+    <Suspense>
+      <AboutContent />
+    </Suspense>
+  );
+}
+
+const AboutContent = () => {
   const searchParams = useSearchParams();
   const activeTab = searchParams?.get("tab") || "scope";
   return (
@@ -702,4 +711,4 @@ export default function About() {
       </section>
     </div>
   );
-}
+};
