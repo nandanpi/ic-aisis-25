@@ -1,93 +1,158 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import CountdownTimer from './components/CountdownTimer';
-import LeafPopEffect from './components/LeafPopEffect';
+import type React from "react";
+
+// import { useState } from "react";
+import { Calendar, MapPin, Download, Clock, Award } from "lucide-react";
+import Timeline from "@/components/Timeline";
+// import CountdownTimer from "@/components/CountdownTimer";
+// import StatsSection from "@/components/StatsSection";
 
 export default function Home() {
-  const [showPop, setShowPop] = useState(false);
-  const [popPosition, setPopPosition] = useState({ x: 0, y: 0 });
-
-  const handleBrochureClick = (e: React.MouseEvent) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    setPopPosition({ x, y });
-    setShowPop(true);
-    setTimeout(() => setShowPop(false), 2000);
-  };
-
   return (
-    <div className="overflow-hidden min-h-screen flex flex-col bg-[#fdfdfd] relative">
-    
-      {showPop && <LeafPopEffect position={popPosition} />}
+    <div className="min-h-screen">
+      <section className="flex w-full justify-center items-center pb-16 pt-32">
+        <div className="container mx-5">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-blue-600 text-sm font-medium mb-8">
+              <Calendar className="w-4 h-4 mr-2" />
+              October 3-4, 2025 • Hybrid Mode
+            </div>
 
-      <main className="flex-1 flex items-center justify-center px-4 sm:px-8 py-12 sm:py-20">
-        <section className="flex flex-col justify-center items-center w-full max-w-6xl">
-          <motion.div
-            className="relative w-full bg-white/80 backdrop-blur-md border border-gray-300 shadow-xl rounded-2xl p-6 sm:p-12 space-y-8 z-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-             
-              alt="NMAMIT Campus"
-              className="w-full h-64 object-cover rounded-xl shadow-md"
-            />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug text-center">
-              International Conference on <br />
-              <span className="underline decoration-4 decoration-gray-800">
-                Artificial Intelligence
-              </span>{' '}
-              for Sustainability<br />
-              and Intelligent Systems
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
+              International Conference on{" "}
+              <span className="gradient-text">Artificial Intelligence</span> for
+              Sustainability
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-700 italic text-center">
-              IC-AISIS’25 | May 5<sup>th</sup> & 6<sup>th</sup>, 2025 | Hybrid Mode
+
+            <p className="md:text-xl text-center text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Join researchers, academicians, and professionals from around the
+              world to explore how AI can shape a sustainable future at NMAM
+              Institute of Technology, Nitte.
             </p>
-            <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-              Hosted by NMAM Institute of Technology, Nitte — uniting researchers, academicians, and professionals to shape a sustainable world through the power of AI.
-            </p>
 
-            <div className="w-full flex justify-center pt-6 sm:pt-8">
-  <div className="flex flex-col sm:flex-row gap-6">
-    <CountdownTimer
-      title="⏳ Registration Ends In"
-      targetDate="2025-04-20T23:59:59"
-    />
-    <CountdownTimer
-      title="🎉 Conference Begins In"
-      targetDate="2025-05-05T09:00:00"
-    />
-  </div>
-</div>
-
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-800 text-sm sm:text-base font-medium text-center pt-6">
-              <p><strong>📍 Venue:</strong> NMAMIT, Nitte</p>
-              <p><strong>🗓️ Registration Deadline:</strong> April 20, 2025</p>
-              <p><strong>📅 Conference Dates:</strong> May 5–6, 2025</p>
+            <div className="flex justify-center items-center my-8">
+              <button className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:scale-105 duration-300 transition-all cursor-pointer hover:shadow-xl inline-flex items-center w-fit">
+                <Download className="w-5 h-5 mr-2" />
+                Download Brochure
+              </button>
             </div>
 
-            <div className="mt-6 text-center relative">
-              <motion.a
-                href="/brochure.pdf"
-                download="IC-AISIS_2025_Brochure"
-                onClick={handleBrochureClick}
-                className="inline-block px-8 py-3 border border-green-700 text-green-800 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-green-700 hover:text-white shadow-md"
-                whileHover={{ scale: 1.05 }}
-              >
-                📄 Download Brochure
-              </motion.a>
+            <div className="flex justify-center items-center flex-wrap gap-6 mb-12">
+              <div className="glass-effect rounded-2xl p-6 text-center">
+                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">Venue</h3>
+                <p className="text-gray-600">
+                  NMAM Institute of Technology
+                  <br />
+                  Nitte, Karnataka
+                </p>
+              </div>
+              <div className="glass-effect rounded-2xl p-6 text-center">
+                <Clock className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Submission Deadline
+                </h3>
+                <p className="text-gray-600">July 15, 2025</p>
+              </div>
+              <div className="glass-effect rounded-2xl p-6 text-center">
+                <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Publication
+                </h3>
+                <p className="text-gray-600">Scopus Indexed</p>
+              </div>
             </div>
-          </motion.div>
-        </section>
-      </main>
+          </div>
+        </div>
+      </section>
 
-      <footer className="py-6 text-center text-gray-600 text-sm border-t border-gray-300 bg-white z-10">
-        <p>© 2025 IC-AISIS | NMAM Institute of Technology, Nitte</p>
-      </footer>
+      {/* <section className="py-16 bg-gray-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-display font-bold text-center text-gray-900 mb-12">
+              Important Dates
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <CountdownTimer
+                title="Registration Ends In"
+                targetDate="2025-04-20T23:59:59"
+                icon={<Clock className="w-6 h-6" />}
+              />
+              <CountdownTimer
+                title="Conference Begins In"
+                targetDate="2025-05-05T09:00:00"
+                icon={<Calendar className="w-6 h-6" />}
+              />
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* <StatsSection /> */}
+
+      <Timeline />
+
+      <div className="flex flex-col justify-center items-center w-full mb-16">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+            Why Attend IC-AISIS 2025?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover cutting-edge research, network with global experts, and
+            contribute to a sustainable future through AI innovation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Keynote Speakers",
+              description:
+                "Learn from world-renowned experts in AI and sustainability",
+              icon: "🎤",
+            },
+            {
+              title: "Research Presentations",
+              description: "Present your work and get feedback from peers",
+              icon: "📊",
+            },
+            {
+              title: "Networking Opportunities",
+              description:
+                "Connect with researchers and industry professionals",
+              icon: "🤝",
+            },
+            {
+              title: "Publication Opportunities",
+              description:
+                "Get your research published in Scopus-indexed journals",
+              icon: "📚",
+            },
+            {
+              title: "Hybrid Participation",
+              description: "Join us in-person or virtually from anywhere",
+              icon: "🌐",
+            },
+            {
+              title: "Student Forum",
+              description: "Special sessions dedicated to student research",
+              icon: "🎓",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="hover:scale-105 duration-300 transition-all hover:shadow-2xl bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+            >
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {item.title}
+              </h3>
+              <p className="text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

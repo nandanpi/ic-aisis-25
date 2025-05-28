@@ -1,95 +1,209 @@
-'use client';
-import React from 'react';
-import { FaGlobe, FaLightbulb, FaMicroscope } from 'react-icons/fa';
-import 'animate.css';
+"use client";
+import { Globe, Lightbulb, Users, Award, Target } from "lucide-react";
 
 export default function About() {
   const highlights = [
     {
-      icon: <FaGlobe className="text-white text-4xl mb-4 relative z-10" />,
-      title: 'Global Engagement',
-      desc: 'Researchers and experts from across the world participate.',
-      
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global Engagement",
+      description:
+        "Researchers and experts from across the world participate in this premier conference.",
     },
     {
-      icon: <FaLightbulb className="text-white text-4xl mb-4 relative z-10" />,
-      title: 'Innovative Ideas',
-      desc: 'Revolutionizing sustainability through cutting-edge AI research.',
-      
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Innovative Research",
+      description:
+        "Cutting-edge AI research focused on sustainability and intelligent systems.",
     },
     {
-      icon: <FaMicroscope className="text-white text-4xl mb-4 relative z-10" />,
-      title: 'Academic Recognition',
-      desc: 'Top research papers published in Scopus-indexed journals.',
-      
+      icon: <Award className="w-8 h-8" />,
+      title: "Academic Excellence",
+      description:
+        "Top research papers published in Scopus-indexed journals and proceedings.",
     },
   ];
 
   return (
-    <section className="bg-white text-gray-800 py-28 px-6 sm:px-12 lg:px-40 max-w-screen-xl mx-auto relative overflow-hidden font-sans">
-      {/* Background grid pattern */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none z-0"></div>
-
-      {/* Header */}
-      <div className="text-center mb-20 relative z-10">
-        <h2 className="text-5xl font-extrabold tracking-tight animate__animated animate__fadeInDown">
-          Conference Overview
-        </h2>
-        <div className="mt-4 w-28 h-1 bg-gray-800 mx-auto rounded-full"></div>
-        <p className="mt-4 text-lg text-gray-500 font-light animate__animated animate__fadeIn animate__delay-1s">
-          Discover how AI intersects with sustainability and transforms the world.
-        </p>
-      </div>
+    <div className="pt-24">
+      {/* Hero Section */}
+      <section className="hero-pattern section-padding">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+              About <span className="gradient-text">IC-AISIS 2025</span>
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Discover how artificial intelligence intersects with
+              sustainability to transform our world and create innovative
+              solutions for tomorrow{"'"}s challenges.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Highlights Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-24 relative z-10">
-        {highlights.map((item, idx) => (
-          <div
-            key={idx}
-            className="relative group rounded-2xl overflow-hidden text-center shadow-xl transform transition hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s"
-          >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60"
-             
-            ></div>
+      <section className="section-padding bg-gray-50">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+                Why IC-AISIS 2025?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join a premier international conference that brings together the
+                brightest minds in AI and sustainability research.
+              </p>
+            </div>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300"></div>
-
-            {/* Content */}
-            <div className="relative p-8 z-10 text-white">
-              {item.icon}
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm">{item.desc}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {highlights.map((item, index) => (
+                <div
+                  key={index}
+                  className="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 gradient-bg rounded-2xl text-white mb-6">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      {/* Description */}
-      <div className="space-y-12 text-lg sm:text-xl leading-relaxed font-serif text-justify animate__animated animate__fadeIn animate__delay-3s relative z-10">
-  <p>
-    The <strong>International Conference on Artificial Intelligence for Sustainability and Intelligent Systems (IC-AISIS&rsquo;25)</strong> is set to take place on May 5th and 6th, 2025, at NMAM Institute of Technology, Nitte. This hybrid event is a convergence of visionaries, researchers, and enthusiasts eager to explore AIs role in a sustainable future.
-  </p>
-  <p>
-    Organized by the Association of Digital Engineering (ADE), the Centre for Intelligent Devices & Systems (CIDS), and the Department of MCA, IC-AISIS&rsquo;25 fosters innovation and academic collaboration. The conference welcomes professionals, students, and scholars to present their work and build lasting connections.
-  </p>
-  <p>
-    Events include keynote addresses, technical sessions, student research showcases, and expert-led workshops. With a strong emphasis on practical applications and interdisciplinary research, IC-AISIS&rsquo;25 aims to be a transformative academic experience.
-  </p>
-</div>
+      <section className="section-padding">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg max-w-none">
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-100 mb-12">
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">
+                  Conference Overview
+                </h2>
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    The{" "}
+                    <strong>
+                      International Conference on Artificial Intelligence for
+                      Sustainability and Intelligent Systems (IC-AISIS&apos;25)
+                    </strong>{" "}
+                    is set to take place on May 5th and 6th, 2025, at NMAM
+                    Institute of Technology, Nitte. This hybrid event represents
+                    a convergence of visionaries, researchers, and enthusiasts
+                    eager to explore AI&apos;s transformative role in creating a
+                    sustainable future.
+                  </p>
+                  <p>
+                    Organized by the Association of Digital Engineering (ADE),
+                    the Centre for Intelligent Devices & Systems (CIDS), and the
+                    Department of MCA, IC-AISIS&apos;25 fosters innovation and
+                    academic collaboration. The conference welcomes
+                    professionals, students, and scholars to present their
+                    groundbreaking work and build lasting connections.
+                  </p>
+                  <p>
+                    Our comprehensive program includes keynote addresses from
+                    industry leaders, technical sessions featuring cutting-edge
+                    research, student research showcases, and expert-led
+                    workshops. With a strong emphasis on practical applications
+                    and interdisciplinary research, IC-AISIS&apos;25 aims to be
+                    a transformative academic experience.
+                  </p>
+                </div>
+              </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-blue-50 rounded-2xl p-8">
+                  <div className="flex items-center mb-4">
+                    <Target className="w-6 h-6 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Our Mission
+                    </h3>
+                  </div>
+                  <p className="text-gray-700">
+                    To create a global platform where AI researchers and
+                    sustainability experts collaborate to develop innovative
+                    solutions for environmental and social challenges.
+                  </p>
+                </div>
 
-      {/* Quote Callout */}
-      <div className="mt-20 bg-gray-100 p-10 rounded-xl text-center shadow-inner animate__animated animate__fadeInUp animate__delay-4s relative z-10">
-        <blockquote className="text-xl italic text-gray-700 max-w-3xl mx-auto">
-          “AI for sustainability is not just a theme  its a commitment to future generations.”
-        </blockquote>
-      </div>
+                <div className="bg-green-50 rounded-2xl p-8">
+                  <div className="flex items-center mb-4">
+                    <Users className="w-6 h-6 text-green-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Our Community
+                    </h3>
+                  </div>
+                  <p className="text-gray-700">
+                    A diverse community of researchers, industry professionals,
+                    policymakers, and students working together to shape the
+                    future of AI and sustainability.
+                  </p>
+                </div>
+              </div>
 
-      {/* Divider */}
-      <div className="mt-24 border-t border-gray-300 w-full relative z-10"></div>
-    </section>
+              <div className="gradient-bg rounded-2xl p-8 lg:p-12 text-center text-white mb-12">
+                <blockquote className="text-2xl lg:text-3xl font-display italic mb-6">
+                  {'"'}AI for sustainability is not just a theme — it&apos;s a
+                  commitment to future generations and our responsibility to
+                  create a better world through technology.{'"'}
+                </blockquote>
+                <cite className="text-blue-100 font-medium">
+                  IC-AISIS 2025 Vision Statement
+                </cite>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">
+                  Expected Impact
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Research Excellence
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      High-impact research publications and meaningful knowledge
+                      exchange between academia and industry professionals.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Global Collaboration
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Creation of new international collaborations and promotion
+                      of interdisciplinary research opportunities.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Practical Applications
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Real-world AI applications designed to tackle sustainable
+                      development challenges across various sectors.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Policy Development
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Development of policy recommendations and industry
+                      roadmaps for implementing AI in sustainability
+                      initiatives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
