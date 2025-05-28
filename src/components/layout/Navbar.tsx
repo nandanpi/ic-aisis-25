@@ -24,10 +24,7 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     {
       label: "About",
-      dropdown: [
-        { href: "/about", label: "Conference Overview" },
-        { href: "/objectives", label: "Objectives" },
-      ],
+      href: "/about",
     },
     { href: "/topics", label: "Topics" },
     { href: "/schedule", label: "Schedule" },
