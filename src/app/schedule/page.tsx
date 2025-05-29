@@ -559,13 +559,13 @@ export default function Schedule() {
           <div className="flex flex-col items-center sm:flex-row gap-4 justify-center w-full">
             <a
               href="/fee"
-              className="text-white bg-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:outline transition-colors"
+              className="text-blue-600 outline px-8 py-4 rounded-xl font-semibold w-full"
             >
               View Registration Fees
             </a>
             <a
               href="/contact"
-              className="outline text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              className="text-white bg-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:outline transition-colors w-full"
             >
               Contact Us
             </a>
