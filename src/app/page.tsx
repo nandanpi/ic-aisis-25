@@ -189,7 +189,7 @@ export default function Home() {
               {
                 title: "Publication Opportunities",
                 description:
-                  "Get your research published in Scopus-indexed journals",
+                  "Get your research published in Scopus-indexed proceedings/journals",
                 icon: "📚",
               },
               {

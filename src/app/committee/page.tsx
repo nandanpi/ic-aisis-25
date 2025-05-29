@@ -1,5 +1,7 @@
 "use client";
 
+import { useSearchParams, useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
 import {
   Users,
   Award,
@@ -7,10 +9,27 @@ import {
   Briefcase,
   GraduationCap,
   Globe,
+  Crown,
+  UserCheck,
 } from "lucide-react";
+
 import Image from "next/image";
+import TabInterface from "@/components/TabInterface";
 
 export default function Committees() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState("leadership");
+
+  useEffect(() => {
+    const tab = searchParams.get("tab") || "leadership";
+    setActiveTab(tab);
+  }, [searchParams]);
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
+    router.push(`/committee?tab=${tabId}`);
+  };
   const patron = {
     name: "Sri N. Vinaya Hegde",
     title:
@@ -44,14 +63,14 @@ export default function Committees() {
 
   const advisoryCommittee = [
     {
-      name: "Dr. Niranjan N Chiplunkar",
-      title: "Principal, NMAM Institute of Technology, Nitte",
-      image: "/committee/niranjan.jpg",
-    },
-    {
       name: "Dr. Praveenkumar Shetty",
       title: "Director (R&D), Nitte (Deemed to be University)",
       image: "/committee/praveen.jpg",
+    },
+    {
+      name: "Dr. Sudesh Bekal",
+      title: "Professor & Dean, Research & Development",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/9/254.jpg",
     },
     {
       name: "Dr. Vijeesh V",
@@ -70,6 +89,118 @@ export default function Committees() {
       name: "Dr. Mangala Shetty",
       title: "Associate Professor, Department of MCA, NMAMIT, Nitte",
       image: "/committee/mangalaShetty.jpg",
+    },
+  ];
+
+  const executiveCommittee = [
+    {
+      name: "Dr. Niranjan N Chiplunkar",
+      title: "Principal, NMAM Institute of Technology, Nitte",
+      image: "/committee/niranjan.jpg",
+    },
+    {
+      name: "Dr. Nagesh Prabhu",
+      title: "Vice Principal",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/6/2231.jpg",
+    },
+    {
+      name: "Sri. Yogeesh Hegde",
+      title: "Director (CM & D)",
+      image: "",
+    },
+    {
+      name: "Dr. Rekha Bhandarkar",
+      title:
+        "Professor & Deputy Registrar of Nitte Off Campus Centre, Nitte(Deemed to be University)",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/7/2189.jpg",
+    },
+    {
+      name: "Dr. K Rajesh Shetty",
+      title:
+        "Director(Curriculum Development) at Nitte(Deemed to be University)",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/7/118.jpg",
+    },
+    {
+      name: "Dr. A N Parameswaran",
+      title: "Director, Institute Industry Collaboration & Coordinator",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/4/26.jpg",
+    },
+    {
+      name: "Dr. Subrahmanya Bhat K",
+      title:
+        "Professor & CoE of Nitte off Campus Centre,Nitte(Deemed to be University)",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/9/253.jpg",
+    },
+    {
+      name: "Dr. Srinath Shetty K",
+      title: "Professor & Resident Engineer",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/4/27.jpg",
+    },
+    {
+      name: "Dr. Venugopala P S",
+      title: "HOD, Dept. of Artificial Intelligence & Data Science Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/176/2658.jpg",
+    },
+    {
+      name: "Dr. Sharada U Shenoy",
+      title:
+        "HOD, Dept. of Artificial Intelligence & Machine Learning Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/166/2196.jpg",
+    },
+    {
+      name: "Dr. Ujwal P",
+      title: "HOD, Dept. of Biotechnology Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/3/4.jpg",
+    },
+    {
+      name: "Dr. Arun Kumar Bhat",
+      title: "HOD, Dept. of Civil Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/4/24.jpg",
+    },
+    {
+      name: "Dr. Radhakrishna",
+      title: "HOD, Dept. of Computer & Communication Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/167/3024.jpg",
+    },
+    {
+      name: "Dr. Jyothi Shetty",
+      title: "HOD, Dept. of Computer Science Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/5/56.jpg",
+    },
+    {
+      name: "Dr. Roshan Fernandes",
+      title: "HOD, Dept. of Computer Science Engineering (Cyber Security)",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/179/2842.jpg",
+    },
+    {
+      name: "Dr. Suryanarayana K",
+      title: "HOD, Dept. of Electrical & Electronics Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/6/99.jpg",
+    },
+    {
+      name: "Dr. K V S S S S Sairam",
+      title: "HOD, Dept. of Electronics & Communication Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/7/119.jpg",
+    },
+    {
+      name: "Dr. Ashwini B",
+      title: "HOD, Dept. of Information Science Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/8/186.jpg",
+    },
+    {
+      name: "Dr. Srinivasa Pai P",
+      title: "HOD, Dept. of Mechanical Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/9/256.jpg",
+    },
+    {
+      name: "Dr. Muralidhara",
+      title: "HOD, Dept. of Robotics & Artificial Intelligence Engineering",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/168/2225.jpg",
+    },
+    {
+      name: "Dr. Mamatha Balipa",
+      title: "HOD, Dept. of MCA",
+      image: "https://nitte.edu.in/admin/photo/3/faculty/10/236.jpg",
     },
   ];
 
@@ -200,217 +331,215 @@ export default function Committees() {
     },
   ];
 
-  return (
-    <div className="min-h-screen pt-16">
-      <section className="relative py-16 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>
-          <div className="absolute inset-0 opacity-20">
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <pattern
-                  id="grid"
-                  width="8"
-                  height="8"
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="rotate(45)"
-                >
-                  <path
-                    d="M 0 0 L 0 1 L 8 1"
-                    fill="none"
-                    stroke="rgba(255,255,255,0.1)"
-                    strokeWidth="0.5"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-        </div>
-
-        <div className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center px-5">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
-              <Users className="w-4 h-4 mr-2" />
-              Leadership & Organization
-            </div>
-
-            <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
-              Conference <span className="text-blue-200">Committees</span>
-            </h1>
-
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Meet the distinguished leaders, experts, and organizers who are
-              making IC-AISIS 2025 a world-class conference on AI and
-              sustainability.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-purple-600" />
-            </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-              Patron
-            </h2>
-            <p className="text-xl text-gray-600">
-              Guiding vision and leadership for the conference
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
-            <div className="flex flex-col items-center text-center">
-              <Image
-                width={100}
-                height={100}
-                src={patron.image || "/placeholder.svg"}
-                alt={patron.name}
-                className="w-48 h-48 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
-              />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {patron.name}
+  const tabs = [
+    {
+      id: "leadership",
+      label: "Leadership & Advisory",
+      icon: <Crown className="w-4 h-4" />,
+      content: (
+        <div className="space-y-16">
+          <div>
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                Patron
               </h3>
-              <p className="text-purple-700 font-medium leading-relaxed max-w-2xl">
-                {patron.title}
+              <p className="text-gray-600">
+                Guiding vision and leadership for the conference
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-blue-600" />
-            </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-              Steering Committee
-            </h2>
-            <p className="text-xl text-gray-600">
-              Strategic oversight and governance
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steeringCommittee.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
-              >
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
+              <div className="flex flex-col items-center text-center">
                 <Image
                   width={100}
                   height={100}
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  src={patron.image || "/placeholder.svg"}
+                  alt={patron.name}
+                  className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
                 />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {member.title}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                  {patron.name}
+                </h4>
+                <p className="text-purple-700 font-medium leading-relaxed max-w-2xl">
+                  {patron.title}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Briefcase className="w-8 h-8 text-green-600" />
             </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-              Advisory Committee
-            </h2>
-            <p className="text-xl text-gray-600">
-              Expert guidance and strategic direction
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {advisoryCommittee.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
-              >
-                <Image
-                  width={100}
-                  height={100}
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
-                />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{member.title}</p>
+          <div>
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-600" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-orange-600" />
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                Steering Committee
+              </h3>
+              <p className="text-gray-600">
+                Strategic oversight and governance
+              </p>
             </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-              General Chairs
-            </h2>
-            <p className="text-xl text-gray-600">
-              Conference leadership and coordination
-            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steeringCommittee.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.title}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {generalChairs.map((chair, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
-              >
-                <Image
-                  width={100}
-                  height={100}
-                  src={chair.image || "/placeholder.svg"}
-                  alt={chair.name}
-                  className="w-36 h-36 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100"
-                />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {chair.name}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{chair.title}</p>
+          <div>
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="w-8 h-8 text-green-600" />
               </div>
-            ))}
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                Advisory Committee
+              </h3>
+              <p className="text-gray-600">
+                Expert guidance and strategic direction
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {advisoryCommittee.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  />
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    {member.title}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      ),
+    },
+    {
+      id: "chairs",
+      label: "Chairs & Executive",
+      icon: <UserCheck className="w-4 h-4" />,
+      content: (
+        <div className="space-y-16">
+          <div>
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                General Chairs
+              </h3>
+              <p className="text-gray-600">
+                Conference leadership and coordination
+              </p>
+            </div>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {generalChairs.map((chair, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    src={chair.image || "/placeholder.svg"}
+                    alt={chair.name}
+                    className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100"
+                  />
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                    {chair.name}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">{chair.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                Executive Committee
+              </h3>
+              <p className="text-gray-600">
+                Program execution and operational oversight
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {executiveCommittee.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "technical",
+      label: "Technical Committee",
+      icon: <Globe className="w-4 h-4" />,
+      content: (
+        <div>
+          <div className="text-center mb-8">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Globe className="w-8 h-8 text-red-600" />
             </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
               Technical Committee
-            </h2>
-            <p className="text-xl text-gray-600">
+            </h3>
+            <p className="text-gray-600">
               Expert reviewers and technical program oversight
             </p>
           </div>
@@ -433,20 +562,22 @@ export default function Committees() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-5">
-          <div className="text-center mb-12">
+      ),
+    },
+    {
+      id: "students",
+      label: "Student Organisers",
+      icon: <GraduationCap className="w-4 h-4" />,
+      content: (
+        <div>
+          <div className="text-center mb-8">
             <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <GraduationCap className="w-8 h-8 text-indigo-600" />
             </div>
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
               Student Organizing Committee
-            </h2>
-            <p className="text-xl text-gray-600">
-              Student leadership and support
-            </p>
+            </h3>
+            <p className="text-gray-600">Student leadership and support</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -460,17 +591,33 @@ export default function Committees() {
                   height={100}
                   src={student.image || "/placeholder.svg"}
                   alt={student.name}
-                  className="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
                 />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">
                   {student.name}
-                </h3>
+                </h4>
                 <p className="text-indigo-600 font-medium">{student.title}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      ),
+    },
+  ];
+
+  return (
+    <Suspense>
+      <div className="min-h-screen pt-16">
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <TabInterface
+              tabs={tabs}
+              activeTab={activeTab}
+              onTabChange={handleTabChange}
+            />
+          </div>
+        </section>
+      </div>
+    </Suspense>
   );
 }

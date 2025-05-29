@@ -686,7 +686,7 @@ const AboutContent = () => {
                           </p>
                         </div>
 
-                        <div className="bg-purple-50 rounded-xl p-6 border border-purple-100">
+                        {/* <div className="bg-purple-50 rounded-xl p-6 border border-purple-100">
                           <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                             <span className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
                               III
@@ -712,7 +712,7 @@ const AboutContent = () => {
                             plays a vital role in preparing students for
                             successful and dynamic careers in the IT sector.
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

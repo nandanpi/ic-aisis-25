@@ -62,7 +62,31 @@ const Navbar = () => {
         },
       ],
     },
-    { href: "/committee", label: "Committees" },
+    {
+      label: "Committees",
+      dropdown: [
+        {
+          href: "/committee?tab=leadership",
+          label: "Leadership & Advisory",
+          tabId: "leadership",
+        },
+        {
+          href: "/committee?tab=chairs",
+          label: "Chairs & Executive",
+          tabId: "chairs",
+        },
+        {
+          href: "/committee?tab=technical",
+          label: "Technical Committee",
+          tabId: "technical",
+        },
+        {
+          href: "/committee?tab=students",
+          label: "Student Organisers",
+          tabId: "students",
+        },
+      ],
+    },
     { href: "/topics", label: "Topics" },
     { href: "/schedule", label: "Schedule" },
     {
@@ -81,17 +105,25 @@ const Navbar = () => {
     return tabId ? currentTab === tabId : false;
   };
 
+  const isCommitteesTabActive = (tabId?: string) => {
+    if (pathname !== "/committees") return false;
+    const currentTab = searchParams.get("tab") || "leadership";
+    return currentTab === tabId;
+  };
+
   const isAnyAboutTabActive = () => {
     return pathname === "/about";
+  };
+
+  const isAnyCommitteesTabActive = () => {
+    return pathname === "/committees";
   };
 
   const isPageActive = (href: string) => {
     return pathname === href;
   };
 
-  const isCallForPapersActive = (
-    dropdown: NavLinkItem[],
-  ) => {
+  const isCallForPapersActive = (dropdown: NavLinkItem[]) => {
     return dropdown.some((item) => pathname === item.href);
   };
 
@@ -117,7 +149,7 @@ const Navbar = () => {
 
         <div className="hidden xl:flex items-center gap-2">
           {navLinks.map((link, index) =>
-            'dropdown' in link ? (
+            "dropdown" in link ? (
               <div
                 key={index}
                 className="relative group"
@@ -127,8 +159,10 @@ const Navbar = () => {
                 <button
                   className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${
                     (link.label === "About" && isAnyAboutTabActive()) ||
+                    (link.label === "Committees" &&
+                      isAnyCommitteesTabActive()) ||
                     (link.label === "Call for Papers" &&
-                      'dropdown' in link && isCallForPapersActive(link.dropdown || []))
+                      isCallForPapersActive(link.dropdown ?? []))
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
@@ -144,31 +178,36 @@ const Navbar = () => {
                       : "opacity-0 invisible translate-y-2"
                   }`}
                 >
-                  {('dropdown' in link) && link.dropdown?.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`block px-4 py-3 text-sm transition-colors ${
-                        link.label === "About"
-                          ? isAboutTabActive(item.tabId || undefined)
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                          : isPageActive(item.href)
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                  {"dropdown" in link &&
+                    link.dropdown?.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`block px-4 py-3 text-sm transition-colors ${
+                          link.label === "About"
+                            ? isAboutTabActive(item.tabId)
+                              ? "text-blue-600 bg-blue-50"
+                              : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                            : link.label === "Committees"
+                              ? isCommitteesTabActive(item.tabId)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                              : isPageActive(item.href)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                 </div>
               </div>
             ) : (
               <Link
-                key={'href' in link ? link.href : index.toString()}
-                href={'href' in link ? link.href : '#'}
+                key={"href" in link ? link.href : index.toString()}
+                href={"href" in link ? link.href : "#"}
                 className={`py-2 px-3 rounded-lg font-medium transition-all duration-200 ${
-                  'href' in link && isPageActive(link.href)
+                  "href" in link && isPageActive(link.href)
                     ? "text-blue-600 bg-blue-50"
                     : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                 }`}
@@ -191,13 +230,16 @@ const Navbar = () => {
         <div className="xl:hidden py-4 border-t border-gray-100">
           <div className="space-y-2">
             {navLinks.map((link, index) =>
-              'dropdown' in link ? (
+              "dropdown" in link ? (
                 <div key={index}>
                   <button
                     className={`w-full text-left py-3 px-4 font-medium rounded-lg transition-colors ${
                       (link.label === "About" && isAnyAboutTabActive()) ||
+                      (link.label === "Committees" &&
+                        isAnyCommitteesTabActive()) ||
                       (link.label === "Call for Papers" &&
-                        'dropdown' in link && isCallForPapersActive(link.dropdown || []))
+                        "dropdown" in link &&
+                        isCallForPapersActive(link.dropdown || []))
                         ? "text-blue-600 bg-blue-50"
                         : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                     }`}
@@ -214,7 +256,7 @@ const Navbar = () => {
                       />
                     </div>
                   </button>
-                  {dropdownOpen === link.label && 'dropdown' in link && (
+                  {dropdownOpen === link.label && "dropdown" in link && (
                     <div className="ml-4 space-y-1 mt-2">
                       {link.dropdown?.map((item) => (
                         <Link
@@ -222,12 +264,16 @@ const Navbar = () => {
                           href={item.href}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors ${
                             link.label === "About"
-                              ? isAboutTabActive(item.tabId || undefined)
+                              ? isAboutTabActive(item.tabId)
                                 ? "text-blue-600 bg-blue-50"
                                 : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                              : isPageActive(item.href)
-                                ? "text-blue-600 bg-blue-50"
-                                : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                              : link.label === "Committees"
+                                ? isCommitteesTabActive(item.tabId)
+                                  ? "text-blue-600 bg-blue-50"
+                                  : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                                : isPageActive(item.href)
+                                  ? "text-blue-600 bg-blue-50"
+                                  : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                           }`}
                           onClick={() => setMenuOpen(false)}
                         >
@@ -239,10 +285,10 @@ const Navbar = () => {
                 </div>
               ) : (
                 <Link
-                  key={'href' in link ? link.href : index.toString()}
-                  href={'href' in link ? link.href : '#'}
+                  key={"href" in link ? link.href : index.toString()}
+                  href={"href" in link ? link.href : "#"}
                   className={`block py-3 px-4 font-medium rounded-lg transition-colors ${
-                    'href' in link && isPageActive(link.href)
+                    "href" in link && isPageActive(link.href)
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
