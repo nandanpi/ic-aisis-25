@@ -7,7 +7,6 @@ import { useState } from "react";
 import PageLoader from "@/components/layout/PageLoader";
 
 export default function Home() {
-  // Dummy
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoading, setIsLoading] = useState(true);
   const handleLoadingComplete = () => {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,17 +21,48 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  interface NavLinkItem {
+    href: string;
+    label: string;
+    tabId?: string;
+  }
+
+  interface NavItemBase {
+    label: string;
+  }
+
+  interface NavItemWithHref extends NavItemBase {
+    href: string;
+    dropdown?: undefined;
+  }
+
+  interface NavItemWithDropdown extends NavItemBase {
+    dropdown: NavLinkItem[];
+    href?: undefined;
+  }
+
+  type NavItem = NavItemWithHref | NavItemWithDropdown;
+
+  const navLinks: NavItem[] = [
     { href: "/", label: "Home" },
     {
       label: "About",
       dropdown: [
-        { href: "/about?tab=scope", label: "Conference Scope" },
-        { href: "/about?tab=objectives", label: "Objectives" },
-        { href: "/about?tab=theme", label: "Theme Importance" },
-        { href: "/about?tab=institutions", label: "Organizing Institutions" },
+        { href: "/about?tab=scope", label: "Conference Scope", tabId: "scope" },
+        {
+          href: "/about?tab=objectives",
+          label: "Objectives",
+          tabId: "objectives",
+        },
+        { href: "/about?tab=theme", label: "Theme Importance", tabId: "theme" },
+        {
+          href: "/about?tab=institutions",
+          label: "Organizing Institutions",
+          tabId: "institutions",
+        },
       ],
     },
+    { href: "/committee", label: "Committees" },
     { href: "/topics", label: "Topics" },
     { href: "/schedule", label: "Schedule" },
     {
@@ -39,12 +71,29 @@ const Navbar = () => {
         { href: "/submission-guidelines", label: "Submission Guidelines" },
       ],
     },
-    { href: "/committee", label: "Committees" },
     { href: "/fee", label: "Registration Fee" },
     { href: "/contact", label: "Contact" },
   ];
 
-  const isAboutPage = pathname === "/about";
+  const isAboutTabActive = (tabId?: string) => {
+    if (pathname !== "/about") return false;
+    const currentTab = searchParams.get("tab") || "scope";
+    return tabId ? currentTab === tabId : false;
+  };
+
+  const isAnyAboutTabActive = () => {
+    return pathname === "/about";
+  };
+
+  const isPageActive = (href: string) => {
+    return pathname === href;
+  };
+
+  const isCallForPapersActive = (
+    dropdown: NavLinkItem[],
+  ) => {
+    return dropdown.some((item) => pathname === item.href);
+  };
 
   return (
     <nav
@@ -68,7 +117,7 @@ const Navbar = () => {
 
         <div className="hidden xl:flex items-center gap-2">
           {navLinks.map((link, index) =>
-            link.dropdown ? (
+            'dropdown' in link ? (
               <div
                 key={index}
                 className="relative group"
@@ -77,11 +126,9 @@ const Navbar = () => {
               >
                 <button
                   className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${
-                    (link.label === "About" && isAboutPage) ||
+                    (link.label === "About" && isAnyAboutTabActive()) ||
                     (link.label === "Call for Papers" &&
-                      link.dropdown.some(
-                        (d) => pathname === d.href.split("?")[0],
-                      ))
+                      'dropdown' in link && isCallForPapersActive(link.dropdown || []))
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
@@ -97,14 +144,18 @@ const Navbar = () => {
                       : "opacity-0 invisible translate-y-2"
                   }`}
                 >
-                  {link.dropdown.map((item) => (
+                  {('dropdown' in link) && link.dropdown?.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       className={`block px-4 py-3 text-sm transition-colors ${
-                        pathname === item.href.split("?")[0]
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                        link.label === "About"
+                          ? isAboutTabActive(item.tabId || undefined)
+                            ? "text-blue-600 bg-blue-50"
+                            : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                          : isPageActive(item.href)
+                            ? "text-blue-600 bg-blue-50"
+                            : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                       }`}
                     >
                       {item.label}
@@ -114,10 +165,10 @@ const Navbar = () => {
               </div>
             ) : (
               <Link
-                key={link.href}
-                href={link.href}
+                key={'href' in link ? link.href : index.toString()}
+                href={'href' in link ? link.href : '#'}
                 className={`py-2 px-3 rounded-lg font-medium transition-all duration-200 ${
-                  pathname === link.href
+                  'href' in link && isPageActive(link.href)
                     ? "text-blue-600 bg-blue-50"
                     : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                 }`}
@@ -140,10 +191,16 @@ const Navbar = () => {
         <div className="xl:hidden py-4 border-t border-gray-100">
           <div className="space-y-2">
             {navLinks.map((link, index) =>
-              link.dropdown ? (
+              'dropdown' in link ? (
                 <div key={index}>
                   <button
-                    className="w-full text-left py-3 px-4 font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                    className={`w-full text-left py-3 px-4 font-medium rounded-lg transition-colors ${
+                      (link.label === "About" && isAnyAboutTabActive()) ||
+                      (link.label === "Call for Papers" &&
+                        'dropdown' in link && isCallForPapersActive(link.dropdown || []))
+                        ? "text-blue-600 bg-blue-50"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
                     onClick={() => {
                       setDropdownOpen(
                         dropdownOpen === link.label ? null : link.label,
@@ -157,16 +214,20 @@ const Navbar = () => {
                       />
                     </div>
                   </button>
-                  {dropdownOpen === link.label && (
+                  {dropdownOpen === link.label && 'dropdown' in link && (
                     <div className="ml-4 space-y-1 mt-2">
-                      {link.dropdown.map((item) => (
+                      {link.dropdown?.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors ${
-                            pathname === item.href.split("?")[0]
-                              ? "text-blue-600 bg-blue-50"
-                              : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                            link.label === "About"
+                              ? isAboutTabActive(item.tabId || undefined)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                              : isPageActive(item.href)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                           }`}
                           onClick={() => setMenuOpen(false)}
                         >
@@ -178,10 +239,10 @@ const Navbar = () => {
                 </div>
               ) : (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={'href' in link ? link.href : index.toString()}
+                  href={'href' in link ? link.href : '#'}
                   className={`block py-3 px-4 font-medium rounded-lg transition-colors ${
-                    pathname === link.href
+                    'href' in link && isPageActive(link.href)
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}

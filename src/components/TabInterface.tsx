@@ -2,8 +2,6 @@
 
 import type React from "react";
 
-import { useState } from "react";
-
 interface TabProps {
   tabs: {
     id: string;
@@ -58,16 +56,19 @@ interface TabInterfaceProps {
     icon?: React.ReactNode;
     content: React.ReactNode;
   }[];
-  defaultTab?: string;
+  activeTab: string;
+  onTabChange: (tabId: string) => void;
 }
 
-const TabInterface: React.FC<TabInterfaceProps> = ({ tabs, defaultTab }) => {
-  const [activeTab, setActiveTab] = useState(defaultTab || tabs[0].id);
-
+const TabInterface: React.FC<TabInterfaceProps> = ({
+  tabs,
+  activeTab,
+  onTabChange,
+}) => {
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-100">
       <div className="p-4">
-        <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} />
+        <Tabs tabs={tabs} activeTab={activeTab} onChange={onTabChange} />
 
         {tabs.map((tab) => (
           <TabPanel key={tab.id} id={tab.id} activeTab={activeTab}>

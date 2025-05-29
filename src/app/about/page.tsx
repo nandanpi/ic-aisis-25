@@ -1,6 +1,7 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import TabInterface from "@/components/TabInterface";
 import {
   Globe,
@@ -24,7 +25,18 @@ export default function About() {
 
 const AboutContent = () => {
   const searchParams = useSearchParams();
-  const activeTab = searchParams?.get("tab") || "scope";
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState("scope");
+
+  useEffect(() => {
+    const tabFromUrl = searchParams.get("tab") || "scope";
+    setActiveTab(tabFromUrl);
+  }, [searchParams]);
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
+    router.push(`/about?tab=${tabId}`, { scroll: false });
+  };
   return (
     <div className="pt-16">
       <section className="relative py-16 overflow-hidden px-5">
@@ -82,7 +94,8 @@ const AboutContent = () => {
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-5">
           <TabInterface
-            defaultTab={activeTab}
+            activeTab={activeTab}
+            onTabChange={handleTabChange}
             tabs={[
               {
                 id: "scope",
