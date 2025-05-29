@@ -2,22 +2,32 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLoaderStore } from "@/lib/store";
 
 interface PageLoaderProps {
   onComplete?: () => void;
 }
 
 const PageLoader = ({ onComplete }: PageLoaderProps) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const { shouldShowLoader, markHomeAsVisited } = useLoaderStore();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      onComplete?.();
-    }, 3000);
+    const showLoader = shouldShowLoader();
+    setIsLoading(showLoader);
 
-    return () => clearTimeout(timer);
-  }, [onComplete]);
+    if (showLoader) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        markHomeAsVisited();
+        onComplete?.();
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    } else {
+      onComplete?.();
+    }
+  }, [shouldShowLoader, markHomeAsVisited, onComplete]);
 
   return (
     <AnimatePresence>
