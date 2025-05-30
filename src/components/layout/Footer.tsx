@@ -153,10 +153,10 @@ const Footer = () => {
                       General Inquiries
                     </p>
                     <a
-                      href="mailto:icaisis.nmamit@gmail.com"
+                      href="mailto:ic-aisis@nmamit.in"
                       className="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium"
                     >
-                      icaisis.nmamit@gmail.com
+                      ic-aisis@nmamit.in
                     </a>
                   </div>
                 </div>

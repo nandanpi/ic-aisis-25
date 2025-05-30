@@ -67,12 +67,12 @@ const Navbar = () => {
       dropdown: [
         {
           href: "/committee?tab=leadership",
-          label: "Leadership & Advisory",
+          label: "Leadership & Executive",
           tabId: "leadership",
         },
         {
           href: "/committee?tab=chairs",
-          label: "Chairs & Executive",
+          label: "Advisory & Chairs",
           tabId: "chairs",
         },
         {

@@ -334,7 +334,7 @@ export default function Committees() {
   const tabs = [
     {
       id: "leadership",
-      label: "Leadership & Advisory",
+      label: "Leadership & Executive",
       icon: <Crown className="w-4 h-4" />,
       content: (
         <div className="space-y-16">
@@ -409,6 +409,51 @@ export default function Committees() {
 
           <div>
             <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                Executive Committee
+              </h3>
+              <p className="text-gray-600">
+                Program execution and operational oversight
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {executiveCommittee.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "chairs",
+      label: "Advisory & Chairs",
+      icon: <UserCheck className="w-4 h-4" />,
+      content: (
+        <div className="space-y-16">
+          <div>
+            <div className="text-center mb-8">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-8 h-8 text-green-600" />
               </div>
@@ -443,15 +488,6 @@ export default function Committees() {
               ))}
             </div>
           </div>
-        </div>
-      ),
-    },
-    {
-      id: "chairs",
-      label: "Chairs & Executive",
-      icon: <UserCheck className="w-4 h-4" />,
-      content: (
-        <div className="space-y-16">
           <div>
             <div className="text-center mb-8">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -482,43 +518,6 @@ export default function Committees() {
                     {chair.name}
                   </h4>
                   <p className="text-gray-600 leading-relaxed">{chair.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
-                Executive Committee
-              </h3>
-              <p className="text-gray-600">
-                Program execution and operational oversight
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {executiveCommittee.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
-                >
-                  <Image
-                    width={100}
-                    height={100}
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
-                  />
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    {member.name}
-                  </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {member.title}
-                  </p>
                 </div>
               ))}
             </div>
