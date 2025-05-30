@@ -72,7 +72,7 @@ const Navbar = () => {
         },
         {
           href: "/committee?tab=chairs",
-          label: "Advisory & Chairs",
+          label: "General Chairs",
           tabId: "chairs",
         },
         {

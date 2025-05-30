@@ -27,27 +27,19 @@ const steeringCommittee = [
     title: "Registrar, Nitte (Deemed to be University)",
     image: "/committee/harsha.jpg",
   },
-];
-
-const advisoryCommittee = [
   {
     name: "Dr. Praveenkumar Shetty",
     title: "Director (R&D), Nitte (Deemed to be University)",
     image: "/committee/praveen.jpg",
   },
-  {
-    name: "Dr. Sudesh Bekal",
-    title: "Professor & Dean, Research & Development",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/9/254.jpg",
-  },
+];
+
+const generalChairs = [
   {
     name: "Dr. Vijeesh V",
     title: "Associate Director (R&D), Nitte Off-Campus Centre",
     image: "/committee/vijeesh.jpg",
   },
-];
-
-const generalChairs = [
   {
     name: "Dr. Shashank Shetty",
     title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
@@ -75,6 +67,11 @@ const executiveCommittee = [
     name: "Sri. Yogeesh Hegde",
     title: "Director (CM & D)",
     image: "",
+  },
+  {
+    name: "Dr. Sudesh Bekal",
+    title: "Professor & Dean, Research & Development",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/9/254.jpg",
   },
   {
     name: "Dr. Rekha Bhandarkar",
