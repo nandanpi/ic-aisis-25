@@ -430,7 +430,6 @@ const studentOrganizers = [
 export {
   patron,
   studentOrganizers,
-  advisoryCommittee,
   executiveCommittee,
   generalChairs,
   steeringCommittee,
