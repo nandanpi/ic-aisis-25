@@ -435,23 +435,13 @@ export default function SubmissionGuidelines() {
             </div>
 
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-              <p className="text-gray-800 leading-relaxed text-sm">
-                {/* <a
-                  href="https://cmt3.research.microsoft.com/About"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <strong>
-                    The Microsoft CMT service was used for managing the
-                    peer-reviewing process for this conference.
-                  </strong>{" "}
-                </a> */}
-                The Microsoft CMT service was used for managing the
-                peer-reviewing process for this conference. This service was
-                provided for free by Microsoft and they bore all expenses,
-                including costs for Azure cloud services as well as for software
-                development and support.
-              </p>
+              <p
+                className="text-gray-800 leading-relaxed text-sm"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.",
+                }}
+              ></p>
             </div>
 
             <a
