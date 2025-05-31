@@ -436,7 +436,7 @@ export default function SubmissionGuidelines() {
 
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <p className="text-gray-800 leading-relaxed text-sm">
-                <a
+                {/* <a
                   href="https://cmt3.research.microsoft.com/About"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -445,10 +445,12 @@ export default function SubmissionGuidelines() {
                     The Microsoft CMT service was used for managing the
                     peer-reviewing process for this conference.
                   </strong>{" "}
-                </a>
-                This service was provided for free by Microsoft and they bore
-                all expenses, including costs for Azure cloud services as well
-                as for software development and support.
+                </a> */}
+                The Microsoft CMT service was used for managing the
+                peer-reviewing process for this conference. This service was
+                provided for free by Microsoft and they bore all expenses,
+                including costs for Azure cloud services as well as for software
+                development and support.
               </p>
             </div>
 
