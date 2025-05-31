@@ -20,7 +20,7 @@ export default function SubmissionGuidelines() {
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            {/* <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <p className="text-gray-800 leading-relaxed text-sm">
                 The Microsoft CMT service was used for managing the
                 peer-reviewing process for this conference. This service was
@@ -28,7 +28,16 @@ export default function SubmissionGuidelines() {
                 including costs for Azure cloud services as well as for software
                 development and support.
               </p>
-            </div>
+            </div> */}
+            <p>
+              <span>
+                The Microsoft CMT service was used for managing the
+                peer-reviewing process for this conference. This service was
+                provided for free by Microsoft and they bore all expenses,
+                including costs for Azure cloud services as well as for software
+                development and support.
+              </span>
+            </p>
 
             <div className="mt-4 flex items-center text-sm text-gray-600">
               <Shield className="w-4 h-4 mr-2" />
