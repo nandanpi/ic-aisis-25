@@ -2,35 +2,41 @@ const patron = {
   name: "Sri N. Vinaya Hegde",
   title:
     "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
-  image: "/committee/vinayaHegde.jpg",
+  image:
+    "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vinayaHegde_Large_p5i0ih.jpg",
 };
 
 const steeringCommittee = [
   {
     name: "Sri Vishal Hegde",
     title: "Pro-Chancellor, Nitte (Deemed to be University)",
-    image: "/committee/vishalHegde.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vishalHegde_Large_ulall0.jpg",
   },
   {
     name: "Prof. (Dr.) M. S. Moodithaya",
     title: "Vice-Chancellor, Nitte (Deemed to be University)",
-    image: "/committee/moodithaya.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665140/moodithaya_Large_ok3g5t.jpg",
   },
   {
     name: "Prof. (Dr.) Gopal Mugeraya",
     title:
       "Vice-President (Technical Education), Nitte (Deemed to be University)",
-    image: "/committee/gopalMugeraya.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/gopalMugeraya_Large_rbvu6z.jpg",
   },
   {
     name: "Dr. Harsha Halahalli",
     title: "Registrar, Nitte (Deemed to be University)",
-    image: "/committee/harsha.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/harsha_Large_yquoqj.jpg",
   },
   {
     name: "Dr. Praveenkumar Shetty",
     title: "Director (R&D), Nitte (Deemed to be University)",
-    image: "/committee/praveen.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665152/praveen_Large_dacloq.jpg",
   },
 ];
 
@@ -38,17 +44,20 @@ const generalChairs = [
   {
     name: "Dr. Vijeesh V",
     title: "Associate Director (R&D), Nitte Off-Campus Centre",
-    image: "/committee/vijeesh.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vijeesh_Large_yfwxij.jpg",
   },
   {
     name: "Dr. Shashank Shetty",
     title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
-    image: "/committee/shashankShetty.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/shashankShetty_Large_rurgwa.jpg",
   },
   {
     name: "Dr. Mangala Shetty",
     title: "Associate Professor, Department of MCA, NMAMIT, Nitte",
-    image: "/committee/mangalaShetty.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/mangalaShetty_Large_rd68u3.jpg",
   },
 ];
 
@@ -56,7 +65,8 @@ const executiveCommittee = [
   {
     name: "Dr. Niranjan N Chiplunkar",
     title: "Principal, NMAM Institute of Technology, Nitte",
-    image: "/committee/niranjan.jpg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665152/niranjan_Large_snbysb.jpg",
   },
   {
     name: "Dr. Nagesh Prabhu",
@@ -66,7 +76,8 @@ const executiveCommittee = [
   {
     name: "Sri. Yogeesh Hegde",
     title: "Director (CM & D)",
-    image: "",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748664762/WhatsApp_Image_2025-05-31_at_08.56.17_urztfe.jpg",
   },
   {
     name: "Dr. Sudesh Bekal",
@@ -279,7 +290,8 @@ const studentOrganizers = [
   {
     name: "Nandan R Pai",
     title: "Department of AI & ML",
-    image: "/committee/students/nandan.jpeg",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665330/nandan_zsy1o4.jpg",
   },
   {
     name: "Abhijna N",

@@ -14,7 +14,8 @@ export default function Contact() {
       institution: "NMAM Institute of Technology, Nitte",
       email: "shashankshetty@nitte.edu.in",
       phone: "+91 81979 03771",
-      image: "/committee/shashankShetty.jpg",
+      image:
+        "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/shashankShetty_Large_rurgwa.jpg",
     },
     {
       name: "Dr. Mangala Shetty",
@@ -23,7 +24,8 @@ export default function Contact() {
       institution: "NMAM Institute of Technology, Nitte",
       email: "mangalapshetty@nitte.edu.in",
       phone: "+91 98808 91217",
-      image: "/committee/mangalaShetty.jpg",
+      image:
+        "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/mangalaShetty_Large_rd68u3.jpg",
     },
   ];
 
