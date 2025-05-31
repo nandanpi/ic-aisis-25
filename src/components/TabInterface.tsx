@@ -12,7 +12,7 @@ interface TabProps {
   onChange: (tabId: string) => void;
 }
 
-export const Tabs: React.FC<TabProps> = ({ tabs, activeTab, onChange }) => {
+const Tabs: React.FC<TabProps> = ({ tabs, activeTab, onChange }) => {
   return (
     <div className="flex flex-wrap border-b border-gray-200">
       {tabs.map((tab) => (
@@ -39,13 +39,8 @@ interface TabPanelProps {
   activeTab: string;
 }
 
-export const TabPanel: React.FC<TabPanelProps> = ({
-  children,
-  id,
-  activeTab,
-}) => {
+const TabPanel: React.FC<TabPanelProps> = ({ children, id, activeTab }) => {
   if (id !== activeTab) return null;
-
   return <div className="py-6 animate-fade-in">{children}</div>;
 };
 
@@ -69,7 +64,6 @@ const TabInterface: React.FC<TabInterfaceProps> = ({
     <div className="bg-white rounded-xl shadow-lg border border-gray-100">
       <div className="p-4">
         <Tabs tabs={tabs} activeTab={activeTab} onChange={onTabChange} />
-
         {tabs.map((tab) => (
           <TabPanel key={tab.id} id={tab.id} activeTab={activeTab}>
             {tab.content}

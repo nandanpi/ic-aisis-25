@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 
 import { Mail, Phone, MapPin, Building, Globe } from "lucide-react";

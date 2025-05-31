@@ -1,5 +1,3 @@
-"use client";
-
 import { colorClasses } from "@/lib/colorClasses";
 import {
   Leaf,

@@ -1,5 +1,3 @@
-"use client";
-
 import { colorClasses2 } from "@/lib/colorClasses";
 import {
   CreditCard,
@@ -338,12 +336,9 @@ export default function RegistrationFees() {
             for this premier conference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="text-blue-600 outline px-8 py-4 rounded-xl font-semibold "
-              disabled
-            >
+            <div className="text-blue-600 outline px-8 py-4 rounded-xl font-semibold ">
               Register Now (Coming Soon)
-            </button>
+            </div>
             <a
               href="/contact"
               className="text-white bg-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:outline transition-colors"
