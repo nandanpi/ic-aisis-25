@@ -231,7 +231,7 @@ export default function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:info@icaisis2025.org"
+              href="mailto:ic-aisis@nmamit.in"
               className="text-white flex justify-center items-center bg-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:outline transition-colors"
             >
               <Mail className="w-5 h-5 mr-2" />

@@ -1,6 +1,6 @@
 "use client";
 import type React from "react";
-import { Calendar, MapPin, Download, Clock, Award } from "lucide-react";
+import { Calendar, MapPin, Download, Clock, Award, Users } from "lucide-react";
 import Image from "next/image";
 import Timeline from "@/components/Timeline";
 import { useState } from "react";
@@ -54,18 +54,20 @@ export default function Home() {
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <a href="/brochure.pdf" download>
-                      <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-fit cursor-pointer">
+                      <button className="bg-white text-blue-600 px-8 py-4 w-full rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                         <Download className="w-5 h-5 mr-2" />
                         Download Brochure
                       </button>
                     </a>
-                    {/* <a
-                      href="/register"
+                    <a
+                      href="https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center backdrop-blur-sm"
                     >
                       <Users className="w-5 h-5 mr-2" />
-                      Register Now
-                    </a> */}
+                      Submit Paper
+                    </a>
                   </div>
                 </div>
 
@@ -137,6 +139,14 @@ export default function Home() {
                           className="block text-sm hover:text-blue-200 transition-colors"
                         >
                           → Research Topics
+                        </a>
+                        <a
+                          href="https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-sm hover:text-blue-200 transition-colors"
+                        >
+                          → Submit Paper
                         </a>
                       </div>
                     </div>

@@ -16,7 +16,7 @@ const Timeline = () => {
       title: "Call for Papers Opens",
       description: "Submission portal opens for research papers and abstracts",
       icon: <FileText className="w-5 h-5" />,
-      status: "upcoming",
+      status: "completed",
       color: "blue",
     },
     {
@@ -194,20 +194,20 @@ const Timeline = () => {
                       </p>
 
                       {/* {(event.title.includes("Deadline") ||
-                        event.title.includes("Conference")) &&
-                        event.status === "upcoming" && (
+                        event.title.includes("Conference")) && */}
+                      {event.status === "upcoming" &&
+                        event.title.includes("Paper Submission Deadline") && (
                           <div className="mt-4 pt-4 border-t border-gray-200">
                             <a
                               href={
-                                event.title.includes("Registration")
-                                  ? "/register"
-                                  : "/submission-guidelines"
+                                "https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
                               }
                               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                             >
-                              {event.title.includes("Registration")
-                                ? "Register Now"
-                                : "Submit Paper"}
+                              {/* {event.title.includes("Deadline")
+                              ? "Register Now"
+                              : "Submit Paper"} */}
+                              Submit Paper
                               <svg
                                 className="w-4 h-4 ml-2"
                                 fill="none"
@@ -223,7 +223,7 @@ const Timeline = () => {
                               </svg>
                             </a>
                           </div>
-                        )} */}
+                        )}
                     </div>
                   </div>
                 </div>
