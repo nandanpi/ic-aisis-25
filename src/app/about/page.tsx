@@ -625,10 +625,38 @@ const AboutContent = () => {
                       </h2>
 
                       <div className="space-y-8 text-justify">
+                        <div className="bg-green-50 rounded-xl p-6 border border-green-100">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                            <span className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                              I
+                            </span>
+                            NMAMIT Student Research Forum (NSRF)
+                          </h3>
+                          <p className="text-gray-700 leading-relaxed">
+                            The NMAMIT Student Research Forum (NSRF) is a
+                            student-driven initiative committed to cultivating a
+                            strong research culture and academic curiosity among
+                            undergraduates. NSRF envisions a dynamic platform
+                            where students, faculty, and researchers collaborate
+                            to explore ideas, share insights, and pursue
+                            impactful research. Through paper presentations,
+                            journal clubs, faculty-guided projects, research
+                            workshops, and interdisciplinary dialogues, NSRF
+                            encourages critical thinking and innovation in areas
+                            such as Artificial Intelligence, Sustainable
+                            Technologies, Biomedical Engineering, and
+                            Computational Sciences. As a key academic wing
+                            supporting IC-AISIS&apos;25, NSRF reflects NMAMIT’s
+                            mission to nurture future researchers and thought
+                            leaders dedicated to scientific progress and
+                            societal advancement.
+                          </p>
+                        </div>
+
                         <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
                           <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                             <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                              I
+                              II
                             </span>
                             The Nitte Centre for Intelligent Devices & Systems
                             (N-CIDS)
@@ -655,34 +683,6 @@ const AboutContent = () => {
                             significantly to economic and social development,
                             empowering learners and addressing pressing societal
                             issues through impactful AI-driven projects.
-                          </p>
-                        </div>
-
-                        <div className="bg-green-50 rounded-xl p-6 border border-green-100">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                            <span className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                              II
-                            </span>
-                            The Association of Digital Engineering (ADE)
-                          </h3>
-                          <p className="text-gray-700 leading-relaxed">
-                            The Association of Digital Engineering (ADE) is a
-                            student-led technical society dedicated to fostering
-                            innovation, collaboration, and skill development in
-                            the field of digital technologies. ADE aims to
-                            create a vibrant community where students, faculty,
-                            and industry professionals can engage in knowledge
-                            exchange, research, and project-based learning.
-                            Through workshops, seminars, technical talks,
-                            competitions, and mentorship programs, ADE will
-                            empower students to stay at the forefront of
-                            emerging technologies such as Artificial
-                            Intelligence, Data Science, IoT, Cybersecurity, and
-                            Intelligent Systems. As one of the organizing bodies
-                            of IC-AISIS&apos;25, ADE represents a growing
-                            movement to build a future-ready student ecosystem
-                            grounded in technological excellence and social
-                            impact.
                           </p>
                         </div>
 

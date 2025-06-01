@@ -290,6 +290,7 @@ const studentOrganizers = [
   {
     name: "Nandan R Pai",
     title: "Department of AI & ML",
+    position: "Student Chair",
     image:
       "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665330/nandan_zsy1o4.jpg",
   },

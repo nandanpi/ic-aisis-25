@@ -1,6 +1,13 @@
 "use client";
 import type React from "react";
-import { Calendar, MapPin, Download, Clock, Award, Users } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  Download,
+  Clock,
+  Award,
+  Notebook,
+} from "lucide-react";
 import Image from "next/image";
 import Timeline from "@/components/Timeline";
 import { useState } from "react";
@@ -65,7 +72,8 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center backdrop-blur-sm"
                     >
-                      <Users className="w-5 h-5 mr-2" />
+                      {/* <Users className="w-5 h-5 mr-2" /> */}
+                      <Notebook className="w-5 h-5 mr-2" />
                       Submit Paper
                     </a>
                   </div>

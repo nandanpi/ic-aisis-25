@@ -236,9 +236,14 @@ export default function TabContent({ tabId }: TabContentProps) {
                   alt={student.name}
                   className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
                 />
-                <h4 className="text-lg font-bold text-gray-900 mb-2">
+                <h4 className="text-lg font-bold text-gray-900 ">
                   {student.name}
                 </h4>
+                {student.position && (
+                  <p className="text-gray-500 font-medium">
+                    {student.position}
+                  </p>
+                )}
                 <p className="text-indigo-600 font-medium">{student.title}</p>
               </div>
             ))}

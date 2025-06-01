@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Building, Globe } from "lucide-react";
 import Image from "next/image";
 
 export default function Contact() {
-  const contactPersons = [
+  const generalChairs = [
     {
       name: "Dr. Shashank Shetty",
       title: "General Chair",
@@ -25,6 +25,19 @@ export default function Contact() {
       phone: "+91 98808 91217",
       image:
         "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/mangalaShetty_Large_rd68u3.jpg",
+    },
+  ];
+
+  const studentChairs = [
+    {
+      name: "Mr. Nandan R Pai",
+      title: "Student Chair",
+      department: "Department of Artificial Intelligence & Machine Learning",
+      institution: "NMAM Institute of Technology, Nitte",
+      email: "nnm22am033@nmamit.in",
+      phone: "+91 94815 85863",
+      image:
+        "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665330/nandan_zsy1o4.jpg",
     },
   ];
 
@@ -93,8 +106,72 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {contactPersons.map((person, index) => (
+          <div className="flex flex-wrap gap-8 justify-center items-stretch">
+            {generalChairs.map((person, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-start mb-6">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={person.image || "/placeholder.svg"}
+                    alt={person.name}
+                    className="w-20 h-20 rounded-full object-cover mr-6 border-4 border-gray-100"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      {person.name}
+                    </h3>
+                    <p className="text-blue-600 font-medium mb-1">
+                      {person.title}
+                    </p>
+                    <p className="text-gray-600 text-sm mb-1">
+                      {person.department}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {person.institution}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <Mail className="w-5 h-5 text-gray-500 mr-3" />
+                    <a
+                      href={`mailto:${person.email}`}
+                      className="text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      {person.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="w-5 h-5 text-gray-500 mr-3" />
+                    <a href={`tel:${person.phone}`} className="text-gray-700">
+                      {person.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
+              Student Chairs
+            </h2>
+            <p className="text-xl text-gray-600">
+              Get in touch with our student chairs
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-stretch gap-8">
+            {studentChairs.map((person, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"

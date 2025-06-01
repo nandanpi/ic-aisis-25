@@ -164,9 +164,17 @@ export default function Topics() {
             <div className="flex flex-col items-center sm:flex-row gap-4 justify-center">
               <a
                 href="/submission-guidelines"
-                className="bg-white w-fit text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
+                className="bg-white w-fit text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 hover:outline outline-white hover:text-white transition-colors inline-flex items-center"
               >
                 Submission Guidelines
+              </a>
+              <a
+                href="https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/20 outline-white outline w-fit text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
+              >
+                Paper Submission
               </a>
             </div>
           </div>
