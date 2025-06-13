@@ -430,7 +430,7 @@ export default function SubmissionGuidelines() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-100">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <div className="flex items-start mb-6">
