@@ -281,10 +281,14 @@ export default function SubmissionGuidelines() {
 
                     {guideline.hasDownload && (
                       <div className="mt-4 pt-4 border-t border-gray-200">
-                        <div className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                        <a
+                          href="/template.docx"
+                          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                          download
+                        >
                           <Download className="w-4 h-4 mr-2" />
-                          Download Template (Coming Soon)
-                        </div>
+                          Download Template
+                        </a>
                       </div>
                     )}
 
