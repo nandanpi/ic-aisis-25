@@ -97,6 +97,7 @@ const Navbar = () => {
       label: "Call for Papers",
       dropdown: [
         { href: "/submission-guidelines", label: "Submission Guidelines" },
+        { href: "/review-policy", label: "Review Policy" },
       ],
     },
     { href: "/fee", label: "Registration Fee" },

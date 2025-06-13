@@ -296,7 +296,9 @@ const AboutContent = () => {
                         return (
                           <div
                             key={index}
-                            className={`card-hover rounded-xl p-6 border ${colorMap[objective.color]} shadow-sm`}
+                            className={`card-hover rounded-xl p-6 border ${
+                              colorMap[objective.color]
+                            } shadow-sm`}
                           >
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
                               {objective.title}
@@ -379,16 +381,14 @@ const AboutContent = () => {
                       </div>
                     </div>
 
-                    {/* SDG Alignment Section */}
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 shadow-sm">
+                    <div className="bg-gradient-to-br !text-left from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 shadow-sm">
                       <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-                        <Target className="w-6 h-6 text-blue-600 mr-3" />
+                        <Target className="w-12 h-12 text-blue-600 mr-3" />
                         UN Sustainable Development Goals Alignment
                       </h3>
 
-                      {/* Primary SDG */}
                       <div className="mb-8">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex sm:flex-row flex-col items-center">
                           <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
                             PRIMARY
                           </span>
@@ -421,9 +421,8 @@ const AboutContent = () => {
                         </div>
                       </div>
 
-                      {/* Supporting SDGs */}
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex sm:flex-row flex-col items-center">
                           <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
                             SUPPORTING
                           </span>
@@ -475,7 +474,11 @@ const AboutContent = () => {
                           ].map((sdg, index) => (
                             <div
                               key={index}
-                              className={`${sdg.bgColor} rounded-xl p-6 border ${sdg.color.split(" ")[2]} shadow-sm card-hover`}
+                              className={`${
+                                sdg.bgColor
+                              } rounded-xl p-6 border ${
+                                sdg.color.split(" ")[2]
+                              } shadow-sm card-hover`}
                             >
                               <div className="flex items-start gap-4">
                                 <div className="flex-shrink-0">
