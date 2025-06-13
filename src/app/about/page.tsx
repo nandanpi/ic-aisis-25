@@ -313,7 +313,7 @@ const AboutContent = () => {
               },
               {
                 id: "theme",
-                label: "Theme Importance",
+                label: "Theme & SDG Focus",
                 icon: <Lightbulb className="w-4 h-4" />,
                 content: (
                   <div className="space-y-8 text-justify">
@@ -378,6 +378,145 @@ const AboutContent = () => {
                         </p>
                       </div>
                     </div>
+
+                    {/* SDG Alignment Section */}
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 shadow-sm">
+                      <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <Target className="w-6 h-6 text-blue-600 mr-3" />
+                        UN Sustainable Development Goals Alignment
+                      </h3>
+
+                      {/* Primary SDG */}
+                      <div className="mb-8">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
+                            PRIMARY
+                          </span>
+                          SDG 9: Industry, Innovation and Infrastructure
+                        </h4>
+                        <div className="bg-white rounded-xl p-6 border border-blue-200 shadow-sm">
+                          <div className="flex flex-col md:flex-row items-start gap-6">
+                            <div className="flex-shrink-0">
+                              <Image
+                                src="/sdg-9-logo.png"
+                                alt="SDG 9 - Industry, Innovation and Infrastructure"
+                                width={80}
+                                height={80}
+                                className="rounded-xl shadow-sm"
+                              />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-gray-700 leading-relaxed">
+                                IC-AISIS&apos;25 is aligned primarily with{" "}
+                                <strong>SDG 9</strong>, which emphasizes
+                                building resilient infrastructure, promoting
+                                inclusive and sustainable industrialization, and
+                                fostering innovation. The theme reflects how AI
+                                technologies can drive smart transformation
+                                across sectors — from manufacturing and energy
+                                to healthcare and agriculture.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Supporting SDGs */}
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                          <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
+                            SUPPORTING
+                          </span>
+                          Additional SDG Alignments
+                        </h4>
+                        <p className="text-gray-700 mb-6">
+                          In addition to SDG 9, the conference also supports the
+                          following SDGs through its various tracks:
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          {[
+                            {
+                              number: "3",
+                              title: "Good Health and Well-being",
+                              context: "AI in healthcare and diagnostics",
+                              color:
+                                "bg-green-100 text-green-600 border-green-200",
+                              bgColor: "bg-green-50",
+                              logo: "/sdg-3-logo.png",
+                            },
+                            {
+                              number: "11",
+                              title: "Sustainable Cities and Communities",
+                              context: "AI for urban planning, smart cities",
+                              color:
+                                "bg-orange-100 text-orange-600 border-orange-200",
+                              bgColor: "bg-orange-50",
+                              logo: "/sdg-11-logo.png",
+                            },
+                            {
+                              number: "12",
+                              title: "Responsible Consumption and Production",
+                              context: "AI in resource optimization",
+                              color:
+                                "bg-yellow-100 text-yellow-600 border-yellow-200",
+                              bgColor: "bg-yellow-50",
+                              logo: "/sdg-12-logo.png",
+                            },
+                            {
+                              number: "13",
+                              title: "Climate Action",
+                              context: "AI for climate prediction & mitigation",
+                              color:
+                                "bg-green-100 text-green-600 border-green-200",
+                              bgColor: "bg-green-50",
+                              logo: "/sdg-13-logo.png",
+                            },
+                          ].map((sdg, index) => (
+                            <div
+                              key={index}
+                              className={`${sdg.bgColor} rounded-xl p-6 border ${sdg.color.split(" ")[2]} shadow-sm card-hover`}
+                            >
+                              <div className="flex items-start gap-4">
+                                <div className="flex-shrink-0">
+                                  <Image
+                                    src={sdg.logo}
+                                    alt={`SDG ${sdg.number} - ${sdg.title}`}
+                                    width={48}
+                                    height={48}
+                                    className="rounded-lg shadow-sm"
+                                  />
+                                </div>
+                                <div className="flex-1">
+                                  <h5 className="font-semibold text-gray-900 mb-2 text-sm">
+                                    SDG {sdg.number}: {sdg.title}
+                                  </h5>
+                                  <p className="text-gray-600 text-sm">
+                                    {sdg.context}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-2xl p-8 shadow-lg">
+                      <h3 className="text-xl font-semibold mb-4">
+                        Driving Global Impact Through AI Innovation
+                      </h3>
+                      <p className="text-green-100 leading-relaxed">
+                        Through its alignment with multiple UN Sustainable
+                        Development Goals, IC-AISIS&apos;25 serves as a catalyst
+                        for transformative research and innovation that
+                        addresses the world&apos;s most pressing challenges. The
+                        conference bridges the gap between cutting-edge AI
+                        research and practical solutions for sustainable
+                        development, fostering collaboration across industries,
+                        academia, and policy-making bodies.
+                      </p>
+                    </div> */}
                   </div>
                 ),
               },
