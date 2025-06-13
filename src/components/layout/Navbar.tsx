@@ -54,7 +54,11 @@ const Navbar = () => {
           label: "Objectives",
           tabId: "objectives",
         },
-        { href: "/about?tab=theme", label: "Theme Importance", tabId: "theme" },
+        {
+          href: "/about?tab=theme",
+          label: "Theme & SDG Focus",
+          tabId: "theme",
+        },
         {
           href: "/about?tab=institutions",
           label: "Organizing Institutions",
