@@ -93,7 +93,7 @@ export default function SubmissionGuidelines() {
     },
     {
       step: "2",
-      title: "Double-Blind Review",
+      title: "Peer Review Process",
       description: "Evaluation by Technical Committee",
       icon: <Eye className="w-6 h-6" />,
     },

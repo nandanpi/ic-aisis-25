@@ -1,3 +1,4 @@
+"use client";
 import { colorClasses2 } from "@/lib/colorClasses";
 import {
   CreditCard,
@@ -7,9 +8,13 @@ import {
   Globe,
   AlertCircle,
   User,
+  Info,
+  X,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function RegistrationFees() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const feeCategories = [
     {
       category: "Student Author (UG/PG)",
@@ -18,17 +23,9 @@ export default function RegistrationFees() {
       description:
         "Undergraduate and Postgraduate student authors with valid ID",
       fees: {
-        earlyBird: "₹2,000",
-        regular: "₹2,500",
+        earlyBird: "₹3,500",
+        regular: "₹4,000",
       },
-      includes: [
-        "Conference kit and materials",
-        "Access to all technical sessions",
-        "Lunch and refreshments",
-        "Certificate of participation",
-        "Student networking sessions",
-        "Paper presentation opportunity",
-      ],
     },
     {
       category: "PhD Student",
@@ -36,8 +33,8 @@ export default function RegistrationFees() {
       color: "green",
       description: "PhD scholars and research fellows",
       fees: {
-        earlyBird: "₹3,000",
-        regular: "₹3,500",
+        earlyBird: "₹8,000",
+        regular: "₹8,500",
       },
     },
     {
@@ -48,7 +45,7 @@ export default function RegistrationFees() {
         "International undergraduate and postgraduate student authors",
       fees: {
         earlyBird: "$85",
-        regular: "$95",
+        regular: "$100",
       },
     },
     {
@@ -57,8 +54,8 @@ export default function RegistrationFees() {
       color: "orange",
       description: "Faculty members and academic professionals (authors)",
       fees: {
-        earlyBird: "₹6,000",
-        regular: "₹6,500",
+        earlyBird: "₹8,500",
+        regular: "₹9,000",
       },
     },
     {
@@ -67,8 +64,8 @@ export default function RegistrationFees() {
       color: "red",
       description: "International faculty members and academic professionals",
       fees: {
-        earlyBird: "$120",
-        regular: "$130",
+        earlyBird: "$160",
+        regular: "$200",
       },
     },
     {
@@ -77,8 +74,8 @@ export default function RegistrationFees() {
       color: "gray",
       description: "Industry experts and corporate professionals",
       fees: {
-        earlyBird: "₹8,000",
-        regular: "₹8,500",
+        earlyBird: "₹10,000",
+        regular: "₹10,500",
       },
     },
     {
@@ -201,13 +198,29 @@ export default function RegistrationFees() {
                       >
                         {category.icon}
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">
-                          {category.category}
-                        </h3>
-                        <p className="text-gray-600 text-sm">
-                          {category.description}
-                        </p>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900">
+                              {category.category}
+                            </h3>
+                            <p className="text-gray-600 text-sm">
+                              {category.description}
+                            </p>
+                          </div>
+
+                          {category.category === "Student Author (UG/PG)" && (
+                            <button
+                              onClick={() => setIsDialogOpen(true)}
+                              className="relative flex items-center justify-center w-18 h-10 bg-blue-500 rounded-full hover:bg-blue-500/80 cursor-pointer transition-colors duration-200 ml-4"
+                              aria-label="More information"
+                            >
+                              <Info className="w-4 h-4 text-white" />
+                              <div className="absolute inset-0 rounded-full bg-blue-500/40 animate-ping"></div>
+                              <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-pulse"></div>
+                            </button>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -348,6 +361,72 @@ export default function RegistrationFees() {
           </div>
         </div>
       </section>
+
+      {isDialogOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className={`bg-gradient-to-r bg-blue-500 p-6 text-white`}>
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold">
+                  Student Author Guidelines
+                </h2>
+                <button
+                  onClick={() => setIsDialogOpen(false)}
+                  className="w-8 h-8 rounded-full cursor-pointer bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <p className="text-white/90 mt-2">
+                As this conference is dedicated to encouraging and showcasing
+                student-led research and innovation, the following guidelines
+                apply specifically to student paper submissions.
+              </p>
+            </div>
+
+            <ul className="px-12 py-6 space-y-4 list-disc">
+              <li>
+                The{" "}
+                <strong>primary (first) author author must be a student</strong>{" "}
+                enrolled in a recognized university or academic institution at
+                the time of submission.
+              </li>
+              <li>
+                The submitted work should reflect the{" "}
+                <strong>original contributions of the student</strong>, although
+                faculty mentors and collaborators may be listed as co-authors.
+              </li>
+              <li>
+                To qualify for student-specific recognition, awards, or
+                registration categories, the student author must complete the
+                <strong>registration process</strong> under the student category
+                and be officially listed as the <strong>first author</strong>.
+              </li>
+              <li>
+                Upon acceptance of the paper, the student author is required to{" "}
+                <strong>attend the conference in person</strong> and present
+                their research. This in-person participation is essential to
+                ensure academic exchange and visibility of student work.
+              </li>
+              <li>
+                Proof of student status (such as a valid student ID or an
+                official letter from the institution) may be requested during
+                registration or at the time of conference participation.
+              </li>
+            </ul>
+
+            <div className={`bg-gradient-to-r bg-blue-200 p-6 text-black`}>
+              <p className="mt-2">
+                This initiative aligns with the conference&apos;s mission to{" "}
+                <strong>foster a vibrant community of young researchers</strong>
+                , provide exposure to peer and expert feedback, and build future
+                leaders in science and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
