@@ -209,7 +209,7 @@ export default function Topics() {
                   className=" rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-full transition-all duration-300 hover:shadow-xl flex flex-col"
                 >
                   <div
-                    className={`bg-gradient-to-br ${colors.gradient} p-6 h-52 md:h-48 flex flex-col gap-4 items-start`}
+                    className={`bg-gradient-to-br ${colors.gradient} p-6 h-56 md:h-48 flex flex-col gap-4 items-start`}
                   >
                     <div className="flex items-start w-full">
                       <div
