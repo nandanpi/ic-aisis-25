@@ -12,6 +12,7 @@ import Image from "next/image";
 import Timeline from "@/components/Timeline";
 import { useState } from "react";
 import PageLoader from "@/components/layout/PageLoader";
+import Link from "next/link";
 
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -159,27 +160,34 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0">
-                          <Image
-                            src="/sdg-9-logo.png"
-                            alt="SDG 9 - Industry, Innovation and Infrastructure"
-                            width={64}
-                            height={64}
-                            className="rounded-xl shadow-sm"
-                          />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">
-                            SDG 9: Industry, Innovation and Infrastructure
-                          </h4>
-                          <p className="text-sm text-gray-600">
-                            Primary Focus of IC-AISIS&apos;25
-                          </p>
+                    <Link href={"/about?tab=theme"}>
+                      <div className="bg-white/95 cursor-pointer backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 ">
+                            <Image
+                              src="/sdg-9-logo.png"
+                              alt="SDG 9 - Industry, Innovation and Infrastructure"
+                              width={64}
+                              height={64}
+                              className="rounded-xl shadow-sm"
+                            />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">
+                              SDG 9: Industry, Innovation and Infrastructure
+                            </h4>
+                            <p className="text-sm text-gray-600">
+                              Primary Focus of IC-AISIS&apos;25
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                              <strong>SDG 9</strong> aims for resilient
+                              infrastructure, sustainable industrialisation, and
+                              innovation.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
