@@ -1,118 +1,117 @@
 import { colorClasses } from "@/lib/colorClasses";
 import {
   Leaf,
-  Heart,
   Building,
-  Shield,
-  Cog,
   Zap,
   Globe,
   ChevronRight,
+  Bot,
+  Brain,
 } from "lucide-react";
 
 export default function Topics() {
   const topicCategories = [
     {
-      id: "environmental",
-      icon: <Leaf className="w-6 h-6" />,
-      title: "AI for Environmental and Sustainable Development",
-      color: "green",
-      items: [
-        "AI for climate change prediction and mitigation",
-        "Renewable energy forecasting and optimization",
-        "Smart grids and energy-efficient systems",
-        "AI in biodiversity monitoring and conservation",
-        "AI for sustainable agriculture and food systems",
-        "Water quality monitoring and management using AI",
-        "Waste detection, classification, and smart recycling",
-      ],
-    },
-    {
-      id: "healthcare",
-      icon: <Heart className="w-6 h-6" />,
-      title: "AI in Healthcare and Well-being",
-      color: "red",
-      items: [
-        "AI in disease prediction and outbreak modeling",
-        "AI-driven medical imaging and diagnostics",
-        "Telemedicine and remote patient monitoring systems",
-        "Health informatics and medical data analytics",
-        "AI for mental health assessment and therapy",
-        "Sustainable and equitable healthcare delivery",
-      ],
-    },
-    {
-      id: "smartcities",
+      id: "infra",
       icon: <Building className="w-6 h-6" />,
-      title: "AI for Smart Cities and Infrastructure",
+      title: "Intelligent Infrastructure and Interactive Technologies",
+      focus:
+        "Smart systems enabling future infrastructure, with strong links to cyber-physical integration and sensing.",
       color: "blue",
       items: [
-        "AI-based urban planning and traffic optimization",
-        "Intelligent waste management and smart utilities",
-        "Disaster prediction and response systems",
-        "Green building design and energy-efficient architecture",
-        "Smart mobility and logistics",
-        "IoT and AI integration for sustainable city management",
+        "Visual Computing and Augmented/Virtual Environments",
+        "Vehicular and Mobile Networked Systems",
+        "Sensors and Intelligent Actuation",
+        "Human-Computer Interaction and Adaptive Interfaces",
+        "Conversational AI and Speech Processing Systems",
+        "Urban Infrastructure and Smart Governance Platforms",
+        "Cyber-Physical Systems for Built Environments",
+        "App Ecosystems and AI-Enabled User Platforms",
+        "Business Intelligence and Sentiment-Aware Applications",
       ],
     },
     {
-      id: "ethics",
-      icon: <Shield className="w-6 h-6" />,
-      title: "Ethical, Responsible, and Inclusive AI",
+      id: "cognitive",
+      icon: <Bot className="w-6 h-6" />,
+      title: "Cognitive Computing and Autonomous Systems",
+      focus:
+        "AI/ML-powered intelligent systems with physics- and signal-processing-aligned applications.",
+      color: "red",
+      items: [
+        "Artificial Intelligence and Deep Learning Architectures",
+        "Machine Learning for Physical and Sensor Data",
+        "Internet of Things and Embedded Intelligence",
+        "Pattern Recognition and Perceptual Systems",
+        "Wearable and Assistive Technologies",
+        "Neural and Knowledge-Based Systems",
+        "Smart Grids and Autonomous Control Systems",
+        "Wireless Communication and Optical Networking",
+        "Biomedical Signal Processing and Predictive Analytics",
+      ],
+    },
+    {
+      id: "sustainable",
+      icon: <Zap className="w-6 h-6" />,
+      title: "Sustainable and High-Performance Computing",
+      focus:
+        "Energy-efficient and sustainable computing systems, modeling, and optimization for large-scale infrastructure.",
+      color: "yellow",
+      items: [
+        "Green and Energy-Aware Computing Architectures",
+        "Reconfigurable and Resilient Systems",
+        "High-Performance and Scalable Computing",
+        "Big Data Analytics for Environmental Monitoring",
+        "Urban Simulation and Modeling of Complex Systems",
+        "Blockchain for Decentralized Smart Infrastructure",
+        "Optimization Techniques for Sustainable Informatics",
+        "AI for Resource Allocation and Energy Forecasting",
+        "Disaster Modeling and Smart Response Systems",
+      ],
+    },
+    {
+      id: "vlsi",
+      icon: <Brain className="w-6 h-6" />,
+      title: "Embedded Intelligence and VLSI Design",
+      focus:
+        "Microelectronics, hardware-software co-design, and embedded systems with real-world applications.",
       color: "purple",
       items: [
-        "AI ethics, bias mitigation, and fairness",
-        "AI governance and policy for sustainable innovation",
-        "Explainable and transparent AI systems",
-        "Responsible AI for social good",
-        "AI and data privacy in sustainability contexts",
-        "AI in humanitarian and development applications",
-      ],
-    },
-    {
-      id: "manufacturing",
-      icon: <Cog className="w-6 h-6" />,
-      title: "AI in Industry and Manufacturing",
-      color: "gray",
-      items: [
-        "AI for predictive maintenance and process optimization",
-        "Smart manufacturing and Industry 4.0 solutions",
-        "AI in supply chain sustainability",
-        "AI-driven green product design",
-        "Industrial energy and resource efficiency using AI",
+        "Embedded Architectures and Real-Time Operating Systems",
+        "Microcontroller Systems in Industrial and Medical Domains",
+        "On-Device Machine Learning and TinyML",
+        "Embedded Cybersecurity and Cryptographic Hardware",
+        "System-on-Chip (SoC) and Semiconductor Devices",
+        "Bio-Inspired Electronics and Smart Wearables",
+        "Drone Systems and Unmanned Embedded Platforms",
+        "Edge AI for Industrial Automation",
+        "From Industry 4.0 to Industry 5.0 Transitions",
       ],
     },
     {
       id: "emerging",
-      icon: <Zap className="w-6 h-6" />,
-      title: "Emerging Technologies for a Sustainable Future",
-      color: "yellow",
+      icon: <Leaf className="w-6 h-6" />,
+      title: "AI-Driven Materials and Sustainable Nanotechnologies",
+      focus:
+        "Use of AI/ML and simulation in advanced materials discovery, optimization, and sustainable material systems.",
+      color: "green",
       items: [
-        "AI and blockchain for sustainable supply chains",
-        "AI-powered edge and fog computing for energy efficiency",
-        "Quantum AI for sustainable systems modeling",
-        "AI for 6G and next-gen communication networks",
-        "AI-enabled digital twins for environmental modeling",
-        "AI in space technologies for Earth observation and sustainability",
-      ],
-    },
-    {
-      id: "crosscutting",
-      icon: <Globe className="w-6 h-6" />,
-      title: "Cross-Cutting Themes",
-      color: "indigo",
-      items: [
-        "Interdisciplinary AI applications in sustainability",
-        "AI education and curriculum for sustainable development",
-        "Case studies and real-world deployments",
-        "AI for achieving the UN Sustainable Development Goals (SDGs)",
+        "AI for Materials Design, Discovery, and Prediction",
+        "Smart and Functional Materials for Energy and Sensing",
+        "Nanomaterials and Nanostructured Composites",
+        "Thin Films, Coatings, and 2D Materials",
+        "Computational Materials Science and Molecular Modeling",
+        "Materials for Flexible and Wearable Electronics",
+        "Green and Biodegradable Material Systems",
+        "AI for Characterization Techniques (XRD, SEM, AFM, etc.)",
+        "Photonic, Magnetic, and Quantum Materials",
+        "AI-Driven Materials for Solar Cells, Fuel Cells, and Batteries",
       ],
     },
   ];
 
   return (
     <div className="min-h-screen">
-      <section className="relative pt-32 pb-24 overflow-hidden px-5">
+      <section className="relative pt-32 pb-16 overflow-hidden px-5">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"></div>
           <div className="absolute inset-0 opacity-20">
@@ -177,6 +176,12 @@ export default function Topics() {
                 Paper Submission
               </a>
             </div>
+
+            <p className="text-xl text-blue-100 mt-12 max-w-3xl mx-auto leading-relaxed">
+              A <strong>Best Paper Award</strong> will be presented for each
+              Track, and certificates will be issued to all authors of the
+              awarded papers.
+            </p>
           </div>
         </div>
       </section>
@@ -204,7 +209,7 @@ export default function Topics() {
                   className=" rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-full transition-all duration-300 hover:shadow-xl flex flex-col"
                 >
                   <div
-                    className={`bg-gradient-to-br ${colors.gradient} p-6 h-24 flex items-start`}
+                    className={`bg-gradient-to-br ${colors.gradient} p-6 h-52 md:h-48 flex flex-col gap-4 items-start`}
                   >
                     <div className="flex items-start w-full">
                       <div
@@ -218,6 +223,7 @@ export default function Topics() {
                         </h3>
                       </div>
                     </div>
+                    <p className={`${colors.title}`}>{category.focus}</p>
                   </div>
 
                   <div className="p-6 bg-white flex-1 flex flex-col">
