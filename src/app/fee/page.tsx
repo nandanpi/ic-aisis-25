@@ -168,7 +168,7 @@ export default function RegistrationFees() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
@@ -248,6 +248,100 @@ export default function RegistrationFees() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
+              Student Author Guidelines
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Important information for students submitting papers to IC-AISIS
+              2025
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mr-4">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <p className="text-lg">
+                  As this conference is dedicated to encouraging and showcasing
+                  student-led research and innovation, the following guidelines
+                  apply specifically to student paper submissions.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                  Primary Authorship
+                </h3>
+                <p className="text-gray-700">
+                  The primary (first) author must be a student enrolled in a
+                  recognized university or academic institution at the time of
+                  submission.
+                </p>
+              </div>
+
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                  Original Work
+                </h3>
+                <p className="text-gray-700">
+                  The submitted work should reflect the original contributions
+                  of the student, although faculty mentors and collaborators may
+                  be listed as co-authors.
+                </p>
+              </div>
+
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                  Registration Requirements
+                </h3>
+                <p className="text-gray-700">
+                  Student authors must complete registration under the student
+                  category and be officially listed as the first author.
+                </p>
+              </div>
+
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                  Attendance
+                </h3>
+                <p className="text-gray-700">
+                  Upon acceptance, the student author is required to attend the
+                  conference in person and present their research.
+                </p>
+              </div>
+
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                  Verification
+                </h3>
+                <p className="text-gray-700">
+                  Proof of student status (valid student ID or official letter)
+                  may be requested during registration or conference
+                  participation.
+                </p>
+              </div>
+
+              <div className="p-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl text-white">
+                <h3 className="text-lg font-semibold mb-3">Our Mission</h3>
+                <p>
+                  This initiative aligns with our mission to foster a vibrant
+                  community of young researchers, provide exposure to peer and
+                  expert feedback, and build future leaders in science and
+                  technology.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
