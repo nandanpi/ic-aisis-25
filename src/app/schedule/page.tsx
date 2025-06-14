@@ -14,7 +14,7 @@ import {
 export default function Schedule() {
   const scheduleData = {
     day1: {
-      date: "May 5, 2025",
+      date: "October 3, 2025",
       title: "Day 1 - Opening & Technical Sessions",
       events: [
         {
@@ -126,7 +126,7 @@ export default function Schedule() {
       ],
     },
     day2: {
-      date: "May 6, 2025",
+      date: "October 4, 2025",
       title: "Day 2 - Advanced Sessions & Closing",
       events: [
         {
