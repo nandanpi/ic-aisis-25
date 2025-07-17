@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: "July 31, 2025",
+      date: `July 31, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
@@ -157,7 +157,9 @@ const Timeline = () => {
 
                   <div className="ml-8 flex-1">
                     <div
-                      className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${styles.card} ${
+                      className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${
+                        styles.card
+                      } ${
                         event.highlight
                           ? "ring-2 ring-red-200 ring-opacity-50"
                           : ""
@@ -168,7 +170,16 @@ const Timeline = () => {
                           className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${styles.badge}`}
                         >
                           <Calendar className="w-4 h-4 mr-2" />
-                          {event.date}
+                          {event.title === "Paper Submission Deadline" ? (
+                            <>
+                              <span className="line-through mr-2">
+                                July 15, 2025
+                              </span>{" "}
+                              {event.date}
+                            </>
+                          ) : (
+                            event.date
+                          )}
                         </span>
 
                         {event.status === "completed" && (
