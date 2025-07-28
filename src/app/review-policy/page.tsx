@@ -49,7 +49,7 @@ export default function ReviewPolicy() {
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <FileText className="w-4 h-4 mr-2" />
               Paper Submission • Deadline:
-              <span className="line-through mx-2">July 15, 2025</span>July 31,
+              <span className="line-through mx-2">July 31, 2025</span>August 15,
               2025
             </div>
 

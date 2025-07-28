@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   const importantDates = [
-    { date: "July 31, 2025", event: "Paper Submission Deadline" },
+    { date: "August 15, 2025", event: "Paper Submission Deadline" },
     { date: "September 10, 2025", event: "Early Bird Registration Deadline" },
     { date: "September 15, 2025", event: "Regular Registration Deadline" },
     { date: "October 3-4, 2025", event: "Conference Dates" },

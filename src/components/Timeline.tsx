@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `July 31, 2025`,
+      date: `August 15, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
