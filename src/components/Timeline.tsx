@@ -171,7 +171,7 @@ const Timeline = () => {
                           {event.title === "Paper Submission Deadline" ? (
                             <>
                               <span className="line-through mr-2">
-                                November 20, 2025
+                                September 1, 2025
                               </span>{" "}
                               {event.date}
                             </>
