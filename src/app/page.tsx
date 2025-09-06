@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-2 border border-white/20">
                     <Calendar className="w-4 h-4 mr-2" />
-                    October 3-4, 2025 • Hybrid Mode
+                    December 18-19, 2025 • Hybrid Mode
                   </div>
 
                   <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
@@ -110,7 +110,7 @@ export default function Home() {
                         <div className="flex items-center text-gray-700">
                           <Clock className="w-5 h-5 mr-3 text-blue-600" />
                           <div>
-                            <p className="font-medium">October 3-4, 2025</p>
+                            <p className="font-medium">December 18-19, 2025</p>
                             <p className="text-sm text-gray-500">
                               Two-day conference
                             </p>

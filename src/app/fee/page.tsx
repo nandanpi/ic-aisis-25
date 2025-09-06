@@ -97,12 +97,12 @@ export default function RegistrationFees() {
       status: "upcmoming",
     },
     {
-      date: "September 10, 2025",
+      date: "November 15, 2025",
       title: "Early Bird Registration Ends",
       status: "upcoming",
     },
     {
-      date: "September 15, 2025",
+      date: "November 20, 2025",
       title: "Final Registration Deadline",
       status: "upcoming",
     },
@@ -155,7 +155,7 @@ export default function RegistrationFees() {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Choose your registration category and secure your spot at IC-AISIS
-              2025. Early bird rates available until September 10, 2025.
+              2025. Early bird rates available until November 15, 2025.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">
@@ -361,11 +361,10 @@ export default function RegistrationFees() {
             {importantDates.map((date, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-xl border-2 ${
-                  date.status === "completed"
-                    ? "bg-green-50 border-green-200"
-                    : "bg-blue-50 border-blue-200"
-                } transition-all duration-200`}
+                className={`p-6 rounded-xl border-2 ${date.status === "completed"
+                  ? "bg-green-50 border-green-200"
+                  : "bg-blue-50 border-blue-200"
+                  } transition-all duration-200`}
               >
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -373,11 +372,10 @@ export default function RegistrationFees() {
                   </h3>
                   <p className="text-gray-600 mb-3">{date.date}</p>
                   <div
-                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                      date.status === "completed"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-blue-100 text-blue-700"
-                    }`}
+                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${date.status === "completed"
+                      ? "bg-green-100 text-green-700"
+                      : "bg-blue-100 text-blue-700"
+                      }`}
                   >
                     {date.status === "completed" ? "Completed" : "Upcoming"}
                   </div>

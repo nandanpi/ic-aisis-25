@@ -189,7 +189,7 @@ export default function SubmissionGuidelines() {
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <FileText className="w-4 h-4 mr-2" />
               Paper Submission • Deadline:
-              <span className="line-through mx-2">July 31, 2025</span>August 15,
+              <span className="line-through mx-2">July 31, 2025</span>September 30,
               2025
             </div>
 
@@ -232,13 +232,11 @@ export default function SubmissionGuidelines() {
               return (
                 <div
                   key={index}
-                  className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${
-                    colors.border
-                  } ${
-                    guideline.highlight
+                  className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${colors.border
+                    } ${guideline.highlight
                       ? "ring-2 ring-red-200 ring-opacity-50"
                       : ""
-                  } hover:shadow-xl transition-all duration-300`}
+                    } hover:shadow-xl transition-all duration-300`}
                 >
                   <div className="flex items-start mb-4">
                     <div

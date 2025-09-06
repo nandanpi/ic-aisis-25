@@ -26,10 +26,10 @@ const Footer = () => {
   ];
 
   const importantDates = [
-    { date: "August 15, 2025", event: "Paper Submission Deadline" },
-    { date: "September 10, 2025", event: "Early Bird Registration Deadline" },
-    { date: "September 15, 2025", event: "Regular Registration Deadline" },
-    { date: "October 3-4, 2025", event: "Conference Dates" },
+    { date: "September 30, 2025", event: "Paper Submission Deadline" },
+    { date: "November 15, 2025", event: "Early Bird Registration Deadline" },
+    { date: "November 20, 2025", event: "Regular Registration Deadline" },
+    { date: "December 18-19, 2025", event: "Conference Dates" },
   ];
 
   return (
@@ -59,7 +59,7 @@ const Footer = () => {
                   <Calendar className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">October 3-4, 2025</p>
+                  <p className="font-semibold text-white">December 18-19, 2025</p>
                   <p className="text-sm text-gray-400">
                     Hybrid Mode Conference
                   </p>

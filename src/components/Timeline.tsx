@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `August 15, 2025`,
+      date: `September 30, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
@@ -29,7 +29,7 @@ const Timeline = () => {
       color: "red",
     },
     {
-      date: "August 31, 2025",
+      date: "October 31, 2025",
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -37,7 +37,7 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "September 10, 2025",
+      date: "November 15, 2025",
       title: "Early Bird Registration Deadline",
       description:
         "Final deadline for early bird conference registration and payment",
@@ -46,7 +46,7 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "September 15, 2025",
+      date: "November 20, 2025",
       title: "Regular Registration Deadline",
       description:
         "Final deadline for regular conference registration and payment",
@@ -55,7 +55,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: "October 3-4, 2025",
+      date: "December 18-19, 2025",
       title: "Conference Days",
       description:
         "Two-day international conference with keynotes and presentations",
@@ -157,13 +157,11 @@ const Timeline = () => {
 
                   <div className="ml-8 flex-1">
                     <div
-                      className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${
-                        styles.card
-                      } ${
-                        event.highlight
+                      className={`bg-white rounded-2xl p-6 shadow-lg border-2 ${styles.card
+                        } ${event.highlight
                           ? "ring-2 ring-red-200 ring-opacity-50"
                           : ""
-                      }`}
+                        }`}
                     >
                       <div className="flex sm:flex-row flex-col gap-2 items-center justify-between mb-4">
                         <span
@@ -173,7 +171,7 @@ const Timeline = () => {
                           {event.title === "Paper Submission Deadline" ? (
                             <>
                               <span className="line-through mr-2">
-                                July 15, 2025
+                                November 20, 2025
                               </span>{" "}
                               {event.date}
                             </>

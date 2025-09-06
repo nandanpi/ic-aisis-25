@@ -118,7 +118,7 @@ const AboutContent = () => {
                           (AI) in the domain of sustainability.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
-                          Scheduled for October 3-4, 2025, at NMAM Institute of
+                          Scheduled for December 18-19, 2025, at NMAM Institute of
                           Technology, Nitte, this hybrid event (in-person +
                           virtual) will gather academicians, researchers,
                           industry professionals, policymakers, and students to
@@ -296,9 +296,8 @@ const AboutContent = () => {
                         return (
                           <div
                             key={index}
-                            className={`card-hover rounded-xl p-6 border ${
-                              colorMap[objective.color]
-                            } shadow-sm`}
+                            className={`card-hover rounded-xl p-6 border ${colorMap[objective.color]
+                              } shadow-sm`}
                           >
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
                               {objective.title}
@@ -474,11 +473,9 @@ const AboutContent = () => {
                           ].map((sdg, index) => (
                             <div
                               key={index}
-                              className={`${
-                                sdg.bgColor
-                              } rounded-xl p-6 border ${
-                                sdg.color.split(" ")[2]
-                              } shadow-sm card-hover`}
+                              className={`${sdg.bgColor
+                                } rounded-xl p-6 border ${sdg.color.split(" ")[2]
+                                } shadow-sm card-hover`}
                             >
                               <div className="flex items-start gap-4">
                                 <div className="flex-shrink-0">
