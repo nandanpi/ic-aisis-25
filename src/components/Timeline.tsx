@@ -12,7 +12,7 @@ import {
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: "June 1, 2025",
+      date: "October 25, 2025",
       title: "Call for Papers Opens",
       description: "Submission portal opens for research papers and abstracts",
       icon: <FileText className="w-5 h-5" />,
@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `September 30, 2025`,
+      date: `November 30, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
@@ -29,7 +29,7 @@ const Timeline = () => {
       color: "red",
     },
     {
-      date: "October 31, 2025",
+      date: "December 10, 2025",
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -37,7 +37,7 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "November 15, 2025",
+      date: "December 20, 2025",
       title: "Early Bird Registration Deadline",
       description:
         "Final deadline for early bird conference registration and payment",
@@ -46,7 +46,7 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "November 20, 2025",
+      date: "December 25, 2025",
       title: "Regular Registration Deadline",
       description:
         "Final deadline for regular conference registration and payment",
@@ -55,10 +55,10 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: "December 18-19, 2025",
-      title: "Conference Days",
+      date: "January 24, 2026",
+      title: "Conference Day",
       description:
-        "Two-day international conference with keynotes and presentations",
+        "One day international conference with keynotes and presentations",
       icon: <Award className="w-5 h-5" />,
       status: "upcoming",
       color: "red",
@@ -123,7 +123,7 @@ const Timeline = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay on track with all important dates and milestones leading up to
-            IC-AISIS 2025
+            IC-AISIS 2026
           </p>
         </div>
 
@@ -168,16 +168,7 @@ const Timeline = () => {
                           className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${styles.badge}`}
                         >
                           <Calendar className="w-4 h-4 mr-2" />
-                          {event.title === "Paper Submission Deadline" ? (
-                            <>
-                              <span className="line-through mr-2">
-                                September 1, 2025
-                              </span>{" "}
-                              {event.date}
-                            </>
-                          ) : (
-                            event.date
-                          )}
+                          {event.date}
                         </span>
 
                         {event.status === "completed" && (

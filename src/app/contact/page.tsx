@@ -26,6 +26,16 @@ export default function Contact() {
       image:
         "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/mangalaShetty_Large_rd68u3.jpg",
     },
+    {
+      name: "Dr. N S S RAMAKRISHNA",
+      title: "General Chair",
+      department: "Assistant Professor Gd-III",
+      institution: "NMAM Institute of Technology, Nitte",
+      email: "ramakrishna.n@nitte.edu.in",
+      phone: "+91 82474 14428",
+      image:
+        "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
+    },
   ];
 
   const studentChairs = [
@@ -87,7 +97,7 @@ export default function Contact() {
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Have questions about IC-AISIS 2025? We&apos;re here to help. Reach
+              Have questions about IC-AISIS 2026? We&apos;re here to help. Reach
               out to us for any inquiries about submissions, registration, or
               conference details.
             </p>
@@ -304,7 +314,7 @@ export default function Contact() {
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Our team is ready to assist you with any inquiries about IC-AISIS
-            2025. Don&apos;t hesitate to reach out!
+            2026. Don&apos;t hesitate to reach out!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

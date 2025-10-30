@@ -17,28 +17,18 @@ export default function RegistrationFees() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const feeCategories = [
     {
-      category: "Student Author (UG/PG)",
+      category: "Student Author (UG/PG/PhD)",
       icon: <GraduationCap className="w-6 h-6" />,
       color: "blue",
       description:
-        "Undergraduate and Postgraduate student authors with valid ID",
+        "Undergraduate, Postgraduate, and PhD student authors with valid ID",
       fees: {
-        earlyBird: "₹3,500",
-        regular: "₹4,000",
+        earlyBird: "₹5,000",
+        regular: "₹5,500",
       },
     },
     {
-      category: "PhD Student",
-      icon: <Users className="w-6 h-6" />,
-      color: "green",
-      description: "PhD scholars and research fellows",
-      fees: {
-        earlyBird: "₹8,000",
-        regular: "₹8,500",
-      },
-    },
-    {
-      category: "Student International Author (UG/PG)",
+      category: "Student International Author (UG/PG/PhD)",
       icon: <Globe className="w-6 h-6" />,
       color: "purple",
       description:
@@ -48,61 +38,21 @@ export default function RegistrationFees() {
         regular: "$100",
       },
     },
-    {
-      category: "Faculty Author",
-      icon: <Building className="w-6 h-6" />,
-      color: "orange",
-      description: "Faculty members and academic professionals (authors)",
-      fees: {
-        earlyBird: "₹8,500",
-        regular: "₹9,000",
-      },
-    },
-    {
-      category: "Faculty International Author",
-      icon: <Globe className="w-6 h-6" />,
-      color: "red",
-      description: "International faculty members and academic professionals",
-      fees: {
-        earlyBird: "$160",
-        regular: "$200",
-      },
-    },
-    {
-      category: "Corporate/Industry Professional",
-      icon: <Building className="w-6 h-6" />,
-      color: "gray",
-      description: "Industry experts and corporate professionals",
-      fees: {
-        earlyBird: "₹10,000",
-        regular: "₹10,500",
-      },
-    },
-    {
-      category: "Attendee",
-      icon: <User className="w-6 h-6" />,
-      color: "indigo",
-      description: "Conference attendees (non-presenting participants)",
-      fees: {
-        earlyBird: "₹500",
-        regular: "₹1,000",
-      },
-    },
   ];
 
   const importantDates = [
     {
-      date: "31 August 2025",
+      date: "December 1, 2025",
       title: "Early Bird Registration Opens",
       status: "upcmoming",
     },
     {
-      date: "November 15, 2025",
+      date: "December 20, 2025",
       title: "Early Bird Registration Ends",
       status: "upcoming",
     },
     {
-      date: "November 20, 2025",
+      date: "December 25, 2025",
       title: "Final Registration Deadline",
       status: "upcoming",
     },
@@ -155,7 +105,7 @@ export default function RegistrationFees() {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Choose your registration category and secure your spot at IC-AISIS
-              2025. Early bird rates available until November 15, 2025.
+              2026. Early bird rates available until December 20, 2025.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">
@@ -180,14 +130,14 @@ export default function RegistrationFees() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {feeCategories.map((category, index) => {
               const colors =
                 colorClasses2[category.color as keyof typeof colorClasses2];
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-md"
                 >
                   <div
                     className={`bg-gradient-to-r h-32 ${colors.gradient} p-6`}
@@ -209,7 +159,7 @@ export default function RegistrationFees() {
                             </p>
                           </div>
 
-                          {category.category === "Student Author (UG/PG)" && (
+                          {category.category.includes("Student Author") && (
                             <button
                               onClick={() => setIsDialogOpen(true)}
                               className="relative flex items-center justify-center w-18 h-10 bg-blue-500 rounded-full hover:bg-blue-500/80 cursor-pointer transition-colors duration-200 ml-4"
@@ -260,7 +210,7 @@ export default function RegistrationFees() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Important information for students submitting papers to IC-AISIS
-              2025
+              2026
             </p>
           </div>
 

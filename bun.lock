@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "ic-aisis-25",
+      "name": "ic-aisis-26",
       "dependencies": {
         "@react-three/drei": "^10.0.6",
         "@react-three/fiber": "^9.1.2",

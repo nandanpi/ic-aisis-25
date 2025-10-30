@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-2 border border-white/20">
                     <Calendar className="w-4 h-4 mr-2" />
-                    December 18-19, 2025 • Hybrid Mode
+                    January 24, 2026 • Hybrid Mode
                   </div>
 
                   <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
@@ -91,7 +91,7 @@ export default function Home() {
                           <h3 className="text-xl font-semibold text-gray-900">
                             Conference Details
                           </h3>
-                          <p className="text-gray-600">IC-AISIS 2025</p>
+                          <p className="text-gray-600">IC-AISIS 2026</p>
                         </div>
                       </div>
 
@@ -110,16 +110,16 @@ export default function Home() {
                         <div className="flex items-center text-gray-700">
                           <Clock className="w-5 h-5 mr-3 text-blue-600" />
                           <div>
-                            <p className="font-medium">December 18-19, 2025</p>
+                            <p className="font-medium">January 24, 2026</p>
                             <p className="text-sm text-gray-500">
-                              Two-day conference
+                              One day conference
                             </p>
                           </div>
                         </div>
                         <div className="flex items-center text-gray-700">
                           <Award className="w-5 h-5 mr-3 text-blue-600" />
                           <div>
-                            <p className="font-medium">Scopus Indexed</p>
+                            <p className="font-medium">Hinweis Research (Scopus-indexed)</p>
                             <p className="text-sm text-gray-500">
                               Publication opportunity
                             </p>
@@ -177,7 +177,7 @@ export default function Home() {
                               SDG 9: Industry, Innovation and Infrastructure
                             </h4>
                             <p className="text-sm text-gray-600">
-                              Primary Focus of IC-AISIS&apos;25
+                              Primary Focus of IC-AISIS&apos;26
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
                               <strong>SDG 9</strong> aims for resilient
@@ -209,7 +209,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto mb-32 px-5">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
-              Why Attend IC-AISIS 2025?
+              Why Attend IC-AISIS 2026?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover cutting-edge research, network with global experts, and
@@ -239,7 +239,7 @@ export default function Home() {
               {
                 title: "Publication Opportunities",
                 description:
-                  "Get your research published in Scopus-indexed proceedings/journals",
+                  "Get your research published with Hinweis Research (Scopus-indexed)",
                 icon: "📚",
               },
               {

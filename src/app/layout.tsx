@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title:
-    "IC-AISIS 2025 | International Conference on AI and Smart Information Systems",
+    "IC-AISIS 2026 | International Conference on AI and Smart Information Systems",
   description:
     "Join us for the International Conference on Artificial Intelligence for Sustainability and Intelligent Systems at NMAM Institute of Technology, Nitte.",
   keywords:

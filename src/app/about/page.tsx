@@ -79,7 +79,7 @@ const AboutContent = () => {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
-              About <span className="text-blue-200">IC-AISIS 2025</span>
+              About <span className="text-blue-200">IC-AISIS 2026</span>
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -111,14 +111,14 @@ const AboutContent = () => {
                         <p className="text-gray-700 leading-relaxed mb-4">
                           The International Conference on Artificial
                           Intelligence for Sustainability and Intelligent
-                          Systems (IC-AISIS&apos;25) aims to provide a global
+                          Systems (IC-AISIS&apos;26) aims to provide a global
                           interdisciplinary platform for the presentation and
                           discussion of cutting-edge research, innovations, and
                           real-world applications of Artificial Intelligence
                           (AI) in the domain of sustainability.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
-                          Scheduled for December 18-19, 2025, at NMAM Institute of
+                          Scheduled for January 24, 2026, at NMAM Institute of
                           Technology, Nitte, this hybrid event (in-person +
                           virtual) will gather academicians, researchers,
                           industry professionals, policymakers, and students to
@@ -179,7 +179,7 @@ const AboutContent = () => {
                           {
                             icon: <Award className="w-6 h-6 text-blue-600" />,
                             title: "Publication Opportunities",
-                            desc: "In Scopus-indexed proceedings",
+                            desc: "Get your research published with Hinweis Research (Scopus-indexed)",
                           },
                         ].map((item, index) => (
                           <div
@@ -212,9 +212,9 @@ const AboutContent = () => {
                         leadership.
                       </p>
                       <p>
-                        Through publication opportunities in Scopus-indexed
-                        proceedings and active knowledge exchange,
-                        IC-AISIS&apos;25 aspires to make a meaningful
+                        Through publication opportunities with Hinweis Research (Scopus-indexed)
+                        and active knowledge exchange,
+                        IC-AISIS&apos;26 aspires to make a meaningful
                         contribution to global efforts in sustainable
                         development powered by artificial intelligence.
                       </p>
@@ -229,12 +229,12 @@ const AboutContent = () => {
                 content: (
                   <div className="space-y-8 text-justify">
                     <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">
-                      Objectives of IC-AISIS&apos;25
+                      Objectives of IC-AISIS&apos;26
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
                       The International Conference on Artificial Intelligence
                       for Sustainability and Intelligent Systems
-                      (IC-AISIS&apos;25) is designed to fulfill the following
+                      (IC-AISIS&apos;26) is designed to fulfill the following
                       core objectives:
                     </p>
 
@@ -324,7 +324,7 @@ const AboutContent = () => {
                         Industries&quot;
                       </h2>
                       <p className="text-blue-100 leading-relaxed">
-                        The central theme of IC-AISIS&apos;25 underscores the
+                        The central theme of IC-AISIS&apos;26 underscores the
                         vital role of intelligent systems in accelerating the
                         transition to a more sustainable future.
                       </p>
@@ -349,7 +349,7 @@ const AboutContent = () => {
                           development.
                         </p>
                         <p className="mb-4">
-                          The theme of IC-AISIS&apos;25, &quot;Harnessing AI to
+                          The theme of IC-AISIS&apos;26, &quot;Harnessing AI to
                           Drive Sustainability Across Industries&quot;,
                           underscores the vital role of intelligent systems in
                           accelerating the transition to a more sustainable
@@ -370,7 +370,7 @@ const AboutContent = () => {
                           inclusive, and aligned with human values.
                         </p>
                         <p>
-                          IC-AISIS&apos;25 seeks not only to advance academic
+                          IC-AISIS&apos;26 seeks not only to advance academic
                           discourse but also to inspire real-world applications
                           and cross-sector collaboration. The event serves as a
                           launchpad for transformative ideas, impactful
@@ -406,7 +406,7 @@ const AboutContent = () => {
                             </div>
                             <div className="flex-1">
                               <p className="text-gray-700 leading-relaxed">
-                                IC-AISIS&apos;25 is aligned primarily with{" "}
+                                IC-AISIS&apos;26 is aligned primarily with{" "}
                                 <strong>SDG 9</strong>, which emphasizes
                                 building resilient infrastructure, promoting
                                 inclusive and sustainable industrialization, and
@@ -508,7 +508,7 @@ const AboutContent = () => {
                       </h3>
                       <p className="text-green-100 leading-relaxed">
                         Through its alignment with multiple UN Sustainable
-                        Development Goals, IC-AISIS&apos;25 serves as a catalyst
+                        Development Goals, IC-AISIS&apos;26 serves as a catalyst
                         for transformative research and innovation that
                         addresses the world&apos;s most pressing challenges. The
                         conference bridges the gap between cutting-edge AI
@@ -785,7 +785,7 @@ const AboutContent = () => {
                             such as Artificial Intelligence, Sustainable
                             Technologies, Biomedical Engineering, and
                             Computational Sciences. As a key academic wing
-                            supporting IC-AISIS&apos;25, NSRF reflects NMAMIT’s
+                            supporting IC-AISIS&apos;26, NSRF reflects NMAMIT&apos;s
                             mission to nurture future researchers and thought
                             leaders dedicated to scientific progress and
                             societal advancement.

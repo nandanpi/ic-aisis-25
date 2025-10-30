@@ -69,6 +69,12 @@ const generalChairs = [
     image:
       "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/mangalaShetty_Large_rd68u3.jpg",
   },
+  {
+    name: "Dr. N S S RAMAKRISHNA",
+    title: "Assistant Professor Gd-III",
+    image:
+      "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
+  },
 ];
 
 const executiveCommittee = [

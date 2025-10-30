@@ -188,8 +188,7 @@ export default function SubGuidelinesClient() {
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <FileText className="w-4 h-4 mr-2" />
               Paper Submission • Deadline:
-              <span className="line-through mx-2">July 31, 2025</span>September 30,
-              2025
+              November 30, 2025
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -198,7 +197,7 @@ export default function SubGuidelinesClient() {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Please adhere to the following instructions when preparing and
-              submitting your full paper for IC-AISIS 2025.
+              submitting your full paper for IC-AISIS 2026.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">
@@ -413,6 +412,15 @@ export default function SubGuidelinesClient() {
                   All submitted manuscripts must have a similarity index
                   (plagiarism) below 10% to proceed to the review stage.
                 </p>
+                <div className="mt-4 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+                  <p className="text-yellow-900 text-sm font-semibold">
+                    <AlertTriangle className="w-4 h-4 inline mr-2" />
+                    Important Note
+                  </p>
+                  <p className="text-yellow-900 text-sm mt-2 leading-relaxed">
+                    Proceedings will be published, and Scopus indexing is expected around late November 2026. All accepted papers will be forwarded for publication; however, final indexing/publication decisions rest with the publisher, and acceptance is not guaranteed.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

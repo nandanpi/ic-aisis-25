@@ -143,7 +143,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  2025
+                  2026
                 </motion.p>
               </div>
             </motion.div>
@@ -167,7 +167,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
               </h3>
               <div className="flex items-center justify-center space-x-2 text-blue-100">
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                <span className="text-sm">December 18-19, 2025</span>
+                <span className="text-sm">January 24, 2026</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                 <span className="text-sm">NMAMIT, Nitte</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>

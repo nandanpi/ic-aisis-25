@@ -26,10 +26,10 @@ const Footer = () => {
   ];
 
   const importantDates = [
-    { date: "September 30, 2025", event: "Paper Submission Deadline" },
-    { date: "November 15, 2025", event: "Early Bird Registration Deadline" },
-    { date: "November 20, 2025", event: "Regular Registration Deadline" },
-    { date: "December 18-19, 2025", event: "Conference Dates" },
+    { date: "November 30, 2025", event: "Paper Submission Deadline" },
+    { date: "December 20, 2025", event: "Early Bird Registration Deadline" },
+    { date: "December 25, 2025", event: "Regular Registration Deadline" },
+    { date: "January 24, 2026", event: "Conference Date" },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="flex flex-col items-start space-x-4 mb-6">
               <div>
                 <h3 className="text-2xl font-display font-bold">
-                  IC-AISIS 2025
+                  IC-AISIS 2026
                 </h3>
                 <p className="text-blue-300 font-medium">
                   International Conference
@@ -59,7 +59,7 @@ const Footer = () => {
                   <Calendar className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">December 18-19, 2025</p>
+                  <p className="font-semibold text-white">January 24, 2026</p>
                   <p className="text-sm text-gray-400">
                     Hybrid Mode Conference
                   </p>
@@ -183,7 +183,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-800 flex sm:flex-row flex-col py-4 w-full gap-4 justify-center items-center">
         <p className="text-gray-400 text-sm">
-          © 2025 IC-AISIS. All rights reserved.
+          © 2026 IC-AISIS. All rights reserved.
         </p>
         <div className="flex items-center space-x-1 text-gray-400 text-sm">
           <span>Organized by</span>
