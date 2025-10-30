@@ -2,12 +2,9 @@
 import { colorClasses2 } from "@/lib/colorClasses";
 import {
   CreditCard,
-  Users,
   GraduationCap,
-  Building,
   Globe,
   AlertCircle,
-  User,
   Info,
   X,
 } from "lucide-react";
