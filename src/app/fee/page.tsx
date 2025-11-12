@@ -139,7 +139,7 @@ export default function RegistrationFees() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {feeCategories.map((category, index) => {
               const colors =
                 colorClasses2[category.color as keyof typeof colorClasses2];
