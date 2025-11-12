@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Suspense } from "react";
-import { Analytics } from "@vercel/analytics/next";
+export const dynamic = "force-static";
+export const fetchCache = "force-cache";
 
 export const metadata: Metadata = {
   title:
@@ -23,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Analytics />
         <Suspense>
           <Navbar />
           <main className="min-h-screen">{children}</main>
