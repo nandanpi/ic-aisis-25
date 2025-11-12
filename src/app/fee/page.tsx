@@ -7,6 +7,7 @@ import {
   AlertCircle,
   Info,
   X,
+  Users,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -33,6 +34,17 @@ export default function RegistrationFees() {
       fees: {
         earlyBird: "$85",
         regular: "$100",
+      },
+    },
+    {
+      category: "Attendee (Non Presenting)",
+      icon: <Users className="w-6 h-6" />,
+      color: "green",
+      description:
+        "Non-presenting attendees, including students, faculty, and industry professionals",
+      fees: {
+        earlyBird: "₹500",
+        regular: "₹1,000",
       },
     },
   ];

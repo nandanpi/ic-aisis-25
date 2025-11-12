@@ -29,7 +29,7 @@ export default function Contact() {
     {
       name: "Dr. N S S RAMAKRISHNA",
       title: "General Chair",
-      department: "Assistant Professor Gd-III",
+      department: "Assistant Professor Gd-III, Dept. of EEE",
       institution: "NMAM Institute of Technology, Nitte",
       email: "ramakrishna.n@nitte.edu.in",
       phone: "+91 82474 14428",

@@ -71,7 +71,7 @@ const generalChairs = [
   },
   {
     name: "Dr. N S S RAMAKRISHNA",
-    title: "Assistant Professor Gd-III",
+    title: "Assistant Professor Gd-III, Department of EEE, NMAMIT, Nitte",
     image:
       "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
   },
