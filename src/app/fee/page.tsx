@@ -56,12 +56,12 @@ export default function RegistrationFees() {
       status: "upcmoming",
     },
     {
-      date: "December 20, 2025",
+      date: "December 31, 2025",
       title: "Early Bird Registration Ends",
       status: "upcoming",
     },
     {
-      date: "December 25, 2025",
+      date: "January 05, 2026",
       title: "Final Registration Deadline",
       status: "upcoming",
     },
@@ -114,7 +114,7 @@ export default function RegistrationFees() {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Choose your registration category and secure your spot at IC-AISIS
-              2026. Early bird rates available until December 20, 2025.
+              2026. Early bird rates available until December 31, 2025.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">

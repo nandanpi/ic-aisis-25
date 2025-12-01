@@ -12,7 +12,7 @@ import {
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: "October 25, 2025",
+      date: "December 1, 2025",
       title: "Call for Papers Opens",
       description: "Submission portal opens for research papers and abstracts",
       icon: <FileText className="w-5 h-5" />,
@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `November 30, 2025`,
+      date: `December 15, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
@@ -29,7 +29,7 @@ const Timeline = () => {
       color: "red",
     },
     {
-      date: "December 10, 2025",
+      date: "January 05, 2026",
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -37,7 +37,7 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "December 20, 2025",
+      date: "December 31, 2025",
       title: "Early Bird Registration Deadline",
       description:
         "Final deadline for early bird conference registration and payment",
@@ -46,7 +46,7 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "December 25, 2025",
+      date: "January 05, 2026",
       title: "Regular Registration Deadline",
       description:
         "Final deadline for regular conference registration and payment",
