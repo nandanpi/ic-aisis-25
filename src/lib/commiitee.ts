@@ -326,6 +326,21 @@ const technicalCommittee = [
     name: "Mr. Shreekant Jere",
     title: "Associate Manager, AI Labs, Accenture Solutions Pvt Ltd, Bangalore",
   },
+  {
+    name: "Prof. Ts. Dr. Asmarashid Bin Ponniran",
+    title:
+      "Professor (VK7), Department of Electrical Engineering, Dean, Faculty of Electrical and Electronic Engineering, UTHM",
+  },
+  {
+    name: "Dr. Wan Suhaimizan Bin Wan Zaki",
+    title:
+      "Senior Lecturer (DS13), Department of Electronic Engineering, Head of Department, Faculty of Electrical and Electronic Engineering, UTHM",
+  },
+  {
+    name: "Dr. Ashok Vajravelu",
+    title:
+      "Senior Lecturer (DS13), Department of Electronic Engineering, Faculty of Electrical and Electronic Engineering, UTHM",
+  },
 ];
 
 const studentOrganizers = [

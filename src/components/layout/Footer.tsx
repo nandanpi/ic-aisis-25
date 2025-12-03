@@ -9,6 +9,7 @@ import {
   ExternalLink,
   ArrowRight,
 } from "lucide-react";
+import UthmAssociation from "@/components/UthmAssociation";
 
 const Footer = () => {
   const quickLinks = [
@@ -178,6 +179,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <UthmAssociation variant="footer" />
         </div>
       </div>
 

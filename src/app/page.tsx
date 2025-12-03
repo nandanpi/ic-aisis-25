@@ -13,6 +13,7 @@ import Timeline from "@/components/Timeline";
 import { useState } from "react";
 import PageLoader from "@/components/layout/PageLoader";
 import Link from "next/link";
+import UthmAssociation from "@/components/UthmAssociation";
 
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -77,6 +78,10 @@ export default function Home() {
                       <Notebook className="w-5 h-5 mr-2" />
                       Submit Paper
                     </a>
+                  </div>
+
+                  <div className="mt-2">
+                    <UthmAssociation variant="hero" />
                   </div>
                 </div>
 
@@ -190,15 +195,6 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:block hidden absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-            <div className="flex flex-col items-center">
-              <span className="text-sm mb-2 opacity-75">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-white/75 rounded-full mt-2 animate-pulse"></div>
               </div>
             </div>
           </div>
