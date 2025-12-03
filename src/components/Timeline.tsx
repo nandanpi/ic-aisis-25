@@ -12,7 +12,7 @@ import {
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: "December 1, 2025",
+      date: "December 03, 2025",
       title: "Call for Papers Opens",
       description: "Submission portal opens for research papers and abstracts",
       icon: <FileText className="w-5 h-5" />,
@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `December 15, 2025`,
+      date: `December 20, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",

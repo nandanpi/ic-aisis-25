@@ -51,7 +51,7 @@ export default function RegistrationFees() {
 
   const importantDates = [
     {
-      date: "December 1, 2025",
+      date: "December 25, 2025",
       title: "Early Bird Registration Opens",
       status: "upcmoming",
     },
