@@ -364,7 +364,7 @@ export default function Schedule() {
               </h3>
               <p className="text-gray-600 text-sm">
                 Multiple networking sessions, coffee breaks, and informal
-                discussions are scheduled throughout both days to facilitate
+                discussions are scheduled throughout the day to facilitate
                 collaboration.
               </p>
             </div>
