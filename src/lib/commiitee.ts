@@ -312,7 +312,7 @@ const technicalCommittee = [
   },
   {
     name: "Dr. Anand R",
-    title: "Professor, Department of MCA, SJEC, Mangalore",
+    title: "Senior Lecturer, Department of Computing, Coventry University, Astana, Kazakhstan",
   },
   {
     name: "Dr. Rohini, R Rao",
