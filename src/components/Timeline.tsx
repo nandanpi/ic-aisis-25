@@ -20,7 +20,7 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `December 20, 2025`,
+      date: `December 25, 2025`,
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
@@ -29,7 +29,7 @@ const Timeline = () => {
       color: "red",
     },
     {
-      date: "January 05, 2026",
+      date: "December 30, 2026",
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -37,7 +37,7 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "December 31, 2025",
+      date: "January 05, 2026",
       title: "Early Bird Registration Deadline",
       description:
         "Final deadline for early bird conference registration and payment",
@@ -46,7 +46,7 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "January 05, 2026",
+      date: "January 15, 2026",
       title: "Regular Registration Deadline",
       description:
         "Final deadline for regular conference registration and payment",
