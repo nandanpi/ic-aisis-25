@@ -27,10 +27,31 @@ const Footer = () => {
   ];
 
   const importantDates = [
-    { date: "December 25, 2025", event: "Paper Submission Deadline" },
-    { date: "January 05, 2026", event: "Early Bird Registration Deadline" },
-    { date: "January 10, 2026", event: "Regular Registration Deadline" },
-    { date: "January 24, 2026", event: "Conference Date" },
+    {
+      date: "03 January 2026",
+      oldDates: ["20 December 2025", "25 December 2025"],
+      event: "Paper Submission Deadline",
+      isHardDeadline: true
+    },
+    {
+      date: "06 January 2026",
+      oldDates: ["25 December 2025", "30 December 2025"],
+      event: "Notification of Acceptance"
+    },
+    {
+      date: "8 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026"],
+      event: "Early Bird Registration"
+    },
+    {
+      date: "10 January 2026",
+      oldDates: ["05 January 2026"],
+      event: "Regular Registration"
+    },
+    {
+      date: "24 January 2026",
+      event: "Conference Date"
+    },
   ];
 
   return (
@@ -131,10 +152,33 @@ const Footer = () => {
               {importantDates.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50"
+                  className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
+                      ? "bg-red-900/30 border-red-700/50"
+                      : "bg-gray-800/50 border-gray-700/50"
+                    }`}
                 >
-                  <span className="text-gray-300 text-sm">{item.event}</span>
-                  <span className="text-blue-400 font-semibold text-sm">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-gray-300 text-sm">{item.event}</span>
+                    {item.isHardDeadline && (
+                      <span className="bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
+                        Hard Deadline
+                      </span>
+                    )}
+                  </div>
+                  {item.oldDates && item.oldDates.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mb-1">
+                      {item.oldDates.map((oldDate, idx) => (
+                        <span
+                          key={idx}
+                          className="text-gray-500 text-xs line-through opacity-60"
+                        >
+                          {oldDate}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <span className={`font-semibold text-sm ${item.isHardDeadline ? "text-red-400" : "text-blue-400"
+                    }`}>
                     {item.date}
                   </span>
                 </div>

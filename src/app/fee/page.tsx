@@ -51,17 +51,18 @@ export default function RegistrationFees() {
 
   const importantDates = [
     {
-      date: "December 25, 2025",
+      date: "25 December 2025",
       title: "Early Bird Registration Opens",
       status: "upcmoming",
     },
     {
-      date: "January 05, 2026",
+      date: "8 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026"],
       title: "Early Bird Registration Ends",
       status: "upcoming",
     },
     {
-      date: "January 10, 2026",
+      date: "10 January 2026",
       title: "Final Registration Deadline",
       status: "upcoming",
     },
@@ -114,7 +115,7 @@ export default function RegistrationFees() {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Choose your registration category and secure your spot at IC-AISIS
-              2026. Early bird rates available until January 05, 2026.
+              2026. Early bird rates available until 8 January 2026.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">
@@ -329,7 +330,19 @@ export default function RegistrationFees() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {date.title}
                   </h3>
-                  <p className="text-gray-600 mb-3">{date.date}</p>
+                  {date.oldDates && date.oldDates.length > 0 && (
+                    <div className="flex flex-wrap gap-1 justify-center mb-2">
+                      {date.oldDates.map((oldDate, idx) => (
+                        <span
+                          key={idx}
+                          className="text-gray-400 text-xs line-through opacity-60"
+                        >
+                          {oldDate}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <p className="text-gray-600 mb-3 font-semibold">{date.date}</p>
                   <div
                     className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${date.status === "completed"
                       ? "bg-green-100 text-green-700"

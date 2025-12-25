@@ -186,10 +186,16 @@ export default function SubmissionGuidelines() {
 
         <div className="relative z-10 px-5">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
-              <FileText className="w-4 h-4 mr-2" />
+            <div className="inline-flex flex-col gap-1 items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
+              <FileText className="w-4 h-4 mr-2 inline" />
               Paper Submission • Deadline:
-              December 25, 2025
+              <div className="flex flex-wrap gap-2 items-center justify-center">
+                <span className="line-through opacity-60 text-xs">20 December 2025</span>
+                <span className="line-through opacity-60 text-xs">25 December 2025</span>
+                <span className="bg-red-600 text-white px-3 py-1 rounded-full font-bold">
+                  03 January 2026 (Hard Deadline)
+                </span>
+              </div>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">

@@ -20,16 +20,19 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: `December 25, 2025`,
+      date: "03 January 2026",
+      oldDates: ["20 December 2025", "25 December 2025"],
       title: "Paper Submission Deadline",
       description:
         "Final deadline for submitting research papers and abstracts",
       icon: <Clock className="w-5 h-5" />,
       status: "upcoming",
       color: "red",
+      isHardDeadline: true,
     },
     {
-      date: "December 30, 2026",
+      date: "06 January 2026",
+      oldDates: ["25 December 2025", "30 December 2025"],
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -37,8 +40,9 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "January 05, 2026",
-      title: "Early Bird Registration Deadline",
+      date: "8 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026"],
+      title: "Early Bird Registration",
       description:
         "Final deadline for early bird conference registration and payment",
       icon: <Users className="w-5 h-5" />,
@@ -46,8 +50,9 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "January 15, 2026",
-      title: "Regular Registration Deadline",
+      date: "10 January 2026",
+      oldDates: ["05 January 2026"],
+      title: "Regular Registration",
       description:
         "Final deadline for regular conference registration and payment",
       icon: <Users className="w-5 h-5" />,
@@ -55,8 +60,8 @@ const Timeline = () => {
       color: "blue",
     },
     {
-      date: "January 24, 2026",
-      title: "Conference Day",
+      date: "24 January 2026",
+      title: "Conference Date",
       description:
         "One day international conference with keynotes and presentations",
       icon: <Award className="w-5 h-5" />,
@@ -164,12 +169,35 @@ const Timeline = () => {
                         }`}
                     >
                       <div className="flex sm:flex-row flex-col gap-2 items-center justify-between mb-4">
-                        <span
-                          className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${styles.badge}`}
-                        >
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {event.date}
-                        </span>
+                        <div className="flex flex-col gap-1">
+                          {event.oldDates && event.oldDates.length > 0 && (
+                            <div className="flex flex-wrap gap-2">
+                              {event.oldDates.map((oldDate, idx) => (
+                                <span
+                                  key={idx}
+                                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-500 line-through opacity-60"
+                                >
+                                  <Calendar className="w-4 h-4 mr-2" />
+                                  {oldDate}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                          <span
+                            className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${event.isHardDeadline
+                                ? "bg-red-600 text-white font-bold"
+                                : styles.badge
+                              }`}
+                          >
+                            <Calendar className="w-4 h-4 mr-2" />
+                            {event.date}
+                            {event.isHardDeadline && (
+                              <span className="ml-2 px-2 py-0.5 bg-white text-red-600 rounded-full text-xs font-bold">
+                                Hard Deadline
+                              </span>
+                            )}
+                          </span>
+                        </div>
 
                         {event.status === "completed" && (
                           <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">
