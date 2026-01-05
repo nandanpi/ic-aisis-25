@@ -52,8 +52,9 @@ export default function ReviewPolicy() {
               <div className="flex flex-wrap gap-2 items-center justify-center">
                 <span className="line-through opacity-60 text-xs">20 December 2025</span>
                 <span className="line-through opacity-60 text-xs">25 December 2025</span>
+                <span className="line-through opacity-60 text-xs">03 January 2026</span>
                 <span className="bg-red-600 text-white px-3 py-1 rounded-full font-bold">
-                  03 January 2026 (Hard Deadline)
+                  8 January 2026 (Hard Deadline)
                 </span>
               </div>
             </div>

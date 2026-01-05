@@ -28,24 +28,24 @@ const Footer = () => {
 
   const importantDates = [
     {
-      date: "03 January 2026",
-      oldDates: ["20 December 2025", "25 December 2025"],
+      date: "8 January 2026",
+      oldDates: ["20 December 2025", "25 December 2025", "03 January 2026"],
       event: "Paper Submission Deadline",
       isHardDeadline: true
     },
     {
-      date: "06 January 2026",
-      oldDates: ["25 December 2025", "30 December 2025"],
+      date: "10 January 2026",
+      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026"],
       event: "Notification of Acceptance"
     },
     {
-      date: "8 January 2026",
-      oldDates: ["31 December 2025", "05 January 2026"],
+      date: "12 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026"],
       event: "Early Bird Registration"
     },
     {
-      date: "10 January 2026",
-      oldDates: ["05 January 2026"],
+      date: "13 January 2026",
+      oldDates: ["05 January 2026", "10 January 2026"],
       event: "Regular Registration"
     },
     {
@@ -153,8 +153,8 @@ const Footer = () => {
                 <div
                   key={index}
                   className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
-                      ? "bg-red-900/30 border-red-700/50"
-                      : "bg-gray-800/50 border-gray-700/50"
+                    ? "bg-red-900/30 border-red-700/50"
+                    : "bg-gray-800/50 border-gray-700/50"
                     }`}
                 >
                   <div className="flex items-center justify-between mb-1">
