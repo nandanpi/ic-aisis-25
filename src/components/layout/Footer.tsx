@@ -34,18 +34,18 @@ const Footer = () => {
       isHardDeadline: true
     },
     {
-      date: "10 January 2026",
-      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026"],
+      date: "12 January 2026",
+      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026", "10 January 2026"],
       event: "Notification of Acceptance"
     },
     {
-      date: "12 January 2026",
-      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026"],
+      date: "15 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026", "12 January 2026"],
       event: "Early Bird Registration"
     },
     {
-      date: "13 January 2026",
-      oldDates: ["05 January 2026", "10 January 2026"],
+      date: "16 January 2026",
+      oldDates: ["05 January 2026", "10 January 2026", "13 January 2026"],
       event: "Regular Registration"
     },
     {

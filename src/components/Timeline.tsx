@@ -31,8 +31,8 @@ const Timeline = () => {
       isHardDeadline: true,
     },
     {
-      date: "10 January 2026",
-      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026"],
+      date: "12 January 2026",
+      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026", "10 January 2026"],
       title: "Notification of Acceptance",
       description: "Authors will be notified about paper acceptance status",
       icon: <CheckCircle className="w-5 h-5" />,
@@ -40,8 +40,8 @@ const Timeline = () => {
       color: "purple",
     },
     {
-      date: "12 January 2026",
-      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026"],
+      date: "15 January 2026",
+      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026", "12 January 2026"],
       title: "Early Bird Registration",
       description:
         "Final deadline for early bird conference registration and payment",
@@ -50,8 +50,8 @@ const Timeline = () => {
       color: "orange",
     },
     {
-      date: "13 January 2026",
-      oldDates: ["05 January 2026", "10 January 2026"],
+      date: "16 January 2026",
+      oldDates: ["05 January 2026", "10 January 2026", "13 January 2026"],
       title: "Regular Registration",
       description:
         "Final deadline for regular conference registration and payment",
