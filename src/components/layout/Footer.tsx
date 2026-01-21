@@ -83,7 +83,7 @@ const Footer = () => {
                 <div>
                   <p className="font-semibold text-white">January 24, 2026</p>
                   <p className="text-sm text-gray-400">
-                    Offline Mode Conference
+                    Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)
                   </p>
                 </div>
               </div>
