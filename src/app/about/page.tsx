@@ -119,7 +119,7 @@ const AboutContent = () => {
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                           Scheduled for January 24, 2026, at NMAM Institute of
-                          Technology, Nitte, this hybrid event (in-person +
+                          Technology, Nitte, this offline event (in-person +
                           virtual) will gather academicians, researchers,
                           industry professionals, policymakers, and students to
                           address sustainability challenges through AI-driven

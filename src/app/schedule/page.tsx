@@ -242,7 +242,7 @@ export default function Schedule() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <Calendar className="w-4 h-4 mr-2" />
-              January 24, 2026 • 1 Day • Hybrid Mode
+              January 24, 2026 • 1 Day • Offline Mode
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -350,7 +350,7 @@ export default function Schedule() {
               </h3>
               <p className="text-gray-600 text-sm">
                 NMAM Institute of Technology, Nitte, Karnataka, India. All
-                sessions will be held in the main conference complex with hybrid
+                sessions will be held in the main conference complex with offline
                 participation options.
               </p>
             </div>

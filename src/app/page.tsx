@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-2 border border-white/20">
                     <Calendar className="w-4 h-4 mr-2" />
-                    January 24, 2026 • Hybrid Mode
+                    January 24, 2026 • Offline Mode
                   </div>
 
                   <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
@@ -239,7 +239,7 @@ export default function Home() {
                 icon: "📚",
               },
               {
-                title: "Hybrid Participation",
+                title: "Offline Participation",
                 description: "Join us in-person or virtually from anywhere",
                 icon: "🌐",
               },
