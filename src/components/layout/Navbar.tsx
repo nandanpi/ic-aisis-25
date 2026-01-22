@@ -39,9 +39,16 @@ const Navbar = () => {
   interface NavItemWithDropdown extends NavItemBase {
     dropdown: NavLinkItem[];
     href?: undefined;
+    downloadUrl?: undefined;
   }
 
-  type NavItem = NavItemWithHref | NavItemWithDropdown;
+  interface NavItemWithDownload extends NavItemBase {
+    downloadUrl: string;
+    href?: undefined;
+    dropdown?: undefined;
+  }
+
+  type NavItem = NavItemWithHref | NavItemWithDropdown | NavItemWithDownload;
 
   const navLinks: NavItem[] = [
     { href: "/", label: "Home" },
@@ -92,6 +99,10 @@ const Navbar = () => {
       ],
     },
     { href: "/topics", label: "Topics" },
+    {
+      downloadUrl: "https://docs.google.com/document/d/1lV8SbSj5a6jP94OIQOtXA3eA0yMFt3bKzyRD9aav68o/export?format=pdf",
+      label: "Presentation Schedule"
+    },
     { href: "/schedule", label: "Schedule" },
     {
       label: "Call for Papers",
@@ -132,11 +143,21 @@ const Navbar = () => {
     return dropdown.some((item) => pathname === item.href);
   };
 
+  const handleDownload = (url: string) => {
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.download = 'resources.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
-        scrolled ? "glass-effect shadow-lg" : "shadow-none"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${scrolled ? "glass-effect shadow-lg" : "shadow-none"
+        }`}
     >
       <div className="flex justify-between items-center p-4">
         <Link href="/" className="flex items-center md:gap-2 gap-1">
@@ -162,60 +183,64 @@ const Navbar = () => {
                 onMouseLeave={() => setDropdownOpen(null)}
               >
                 <button
-                  className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${
-                    (link.label === "About" && isAnyAboutTabActive()) ||
+                  className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${(link.label === "About" && isAnyAboutTabActive()) ||
                     (link.label === "Committees" &&
                       isAnyCommitteesTabActive()) ||
                     (link.label === "Call for Papers" &&
                       isCallForPapersActive(link.dropdown ?? []))
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                  }`}
+                    ? "text-blue-600 bg-blue-50"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
                 >
                   <span className="font-medium">{link.label}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
 
                 <div
-                  className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 transition-all duration-200 ${
-                    dropdownOpen === link.label
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible translate-y-2"
-                  }`}
+                  className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 transition-all duration-200 ${dropdownOpen === link.label
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible translate-y-2"
+                    }`}
                 >
                   {"dropdown" in link &&
                     link.dropdown?.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className={`block px-4 py-3 text-sm transition-colors ${
-                          link.label === "About"
-                            ? isAboutTabActive(item.tabId)
+                        className={`block px-4 py-3 text-sm transition-colors ${link.label === "About"
+                          ? isAboutTabActive(item.tabId)
+                            ? "text-blue-600 bg-blue-50"
+                            : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                          : link.label === "Committees"
+                            ? isCommitteesTabActive(item.tabId)
                               ? "text-blue-600 bg-blue-50"
                               : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                            : link.label === "Committees"
-                              ? isCommitteesTabActive(item.tabId)
-                                ? "text-blue-600 bg-blue-50"
-                                : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                              : isPageActive(item.href)
-                                ? "text-blue-600 bg-blue-50"
-                                : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                        }`}
+                            : isPageActive(item.href)
+                              ? "text-blue-600 bg-blue-50"
+                              : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                          }`}
                       >
                         {item.label}
                       </Link>
                     ))}
                 </div>
               </div>
+            ) : "downloadUrl" in link ? (
+              <button
+                key={index}
+                onClick={() => handleDownload(link.downloadUrl)}
+                className="py-2 px-3 rounded-lg font-medium transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
-                key={"href" in link ? link.href : index.toString()}
-                href={"href" in link ? link.href : "#"}
-                className={`py-2 px-3 rounded-lg font-medium transition-all duration-200 ${
-                  "href" in link && isPageActive(link.href)
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                }`}
+                key={"href" in link && link.href ? link.href : index.toString()}
+                href={"href" in link && link.href ? link.href : "#"}
+                className={`py-2 px-3 rounded-lg font-medium transition-all duration-200 ${"href" in link && link.href && isPageActive(link.href)
+                  ? "text-blue-600 bg-blue-50"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -238,16 +263,15 @@ const Navbar = () => {
               "dropdown" in link ? (
                 <div key={index}>
                   <button
-                    className={`w-full text-left py-3 px-4 font-medium rounded-lg transition-colors ${
-                      (link.label === "About" && isAnyAboutTabActive()) ||
+                    className={`w-full text-left py-3 px-4 font-medium rounded-lg transition-colors ${(link.label === "About" && isAnyAboutTabActive()) ||
                       (link.label === "Committees" &&
                         isAnyCommitteesTabActive()) ||
                       (link.label === "Call for Papers" &&
                         "dropdown" in link &&
                         isCallForPapersActive(link.dropdown || []))
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    }`}
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      }`}
                     onClick={() => {
                       setDropdownOpen(
                         dropdownOpen === link.label ? null : link.label,
@@ -267,19 +291,18 @@ const Navbar = () => {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className={`block py-2 px-4 text-sm rounded-lg transition-colors ${
-                            link.label === "About"
-                              ? isAboutTabActive(item.tabId)
+                          className={`block py-2 px-4 text-sm rounded-lg transition-colors ${link.label === "About"
+                            ? isAboutTabActive(item.tabId)
+                              ? "text-blue-600 bg-blue-50"
+                              : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                            : link.label === "Committees"
+                              ? isCommitteesTabActive(item.tabId)
                                 ? "text-blue-600 bg-blue-50"
                                 : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                              : link.label === "Committees"
-                                ? isCommitteesTabActive(item.tabId)
-                                  ? "text-blue-600 bg-blue-50"
-                                  : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                                : isPageActive(item.href)
-                                  ? "text-blue-600 bg-blue-50"
-                                  : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                          }`}
+                              : isPageActive(item.href)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                            }`}
                           onClick={() => setMenuOpen(false)}
                         >
                           {item.label}
@@ -288,15 +311,25 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
+              ) : "downloadUrl" in link ? (
+                <button
+                  key={index}
+                  onClick={() => {
+                    handleDownload(link.downloadUrl);
+                    setMenuOpen(false);
+                  }}
+                  className="block w-full text-left py-3 px-4 font-medium rounded-lg transition-colors text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                >
+                  {link.label}
+                </button>
               ) : (
                 <Link
-                  key={"href" in link ? link.href : index.toString()}
-                  href={"href" in link ? link.href : "#"}
-                  className={`block py-3 px-4 font-medium rounded-lg transition-colors ${
-                    "href" in link && isPageActive(link.href)
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                  }`}
+                  key={"href" in link && link.href ? link.href : index.toString()}
+                  href={"href" in link && link.href ? link.href : "#"}
+                  className={`block py-3 px-4 font-medium rounded-lg transition-colors ${"href" in link && link.href && isPageActive(link.href)
+                    ? "text-blue-600 bg-blue-50"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
